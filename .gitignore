@@ -2,7 +2,6 @@
 *.fyc
 *.ilg
 *.gz
-*.tex
 *.aux
 *.fdb_latexmk
 *.fls
@@ -14,6 +13,7 @@
 *.nav
 *.out
 *.snm
-.jpg
-.png
-.jpeg
+*.jpg
+*.png
+*.jpeg
+*.ind
