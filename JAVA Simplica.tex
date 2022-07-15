@@ -5,6 +5,7 @@
 \usepackage{index}                      %  For Inserting Index in the document
 \usepackage{url,hyperref}               %  For Inserting Index in the document
 \usepackage[xindy]{imakeidx}            %  For Inserting Index in Alphabetical order
+\usepackage{float}                      %  For Preventing Table Repositioning
 
 \makeindex                              %  For Inserting Index in the document
 
@@ -113,22 +114,28 @@ Java has many applications, including software development, mobile applications,
 Knowing Java opens a lot of possibilities for us as a developer.
 
 \chapter*{Preface}
-JAVA knowledge is vast. People most often have to go through most of the documentations of the code then they could think of writing something.
-Moreover, sometimes people looses their interest in learning JAVA or write their codes in JAVA. So in that case they just give online posts
-and hire outsourcers to complete there school/college projects howmeworks and others.
-This processs is both insecure and costly. In this book I just tried to teach JAVA  in a simple way and by which
-people can start doing their school/college projects howmeworks and others by their own having simple knowledge. Thus, they can learn the vast knowledge slowly and more interesting way.
+JAVA\cite{Ref1} knowledge is vast. People most often have to go through most of the documentations of the JAVA code then they could think of writing something.
+Moreover, sometimes people looses their interest in learning JAVA or writing their codes in JAVA. So in that case they just give online posts
+and hire outsourcers to complete their school/college projects, howmeworks and others.
+This processs is both insecure and costly. In this book I just tried to teach JAVA in a simple way and by which
+people can start doing their school/college projects, howmeworks and others by their own, having simple knowledge. Thus, they can learn the vast knowledge slowly and more interesting way.
 
 \addcontentsline{toc}{chapter}{Preface}
 % 
 % Chapter 1
 % 
 \chapter{History of JAVA}
-Java was originally developed by James Gosling\cite{Ref2} \index{James Gosling} at Sun Microsystems and released in May 1995 as a core component of Sun Microsystems' Java platform.
+Java\cite{Ref1} was originally developed by James Gosling\cite{Ref2} \index{James Gosling} at Sun Microsystems and released in May 1995 as a core component of Sun Microsystems' Java platform.
 The original and reference implementation Java compilers\index{Java compilers}, virtual machines\index{virtual machines}, and class libraries\index{class libraries} were originally released by Sun under proprietary licenses.
 As of May 2007, in compliance with the specifications of the Java Community Process, Sun had relicensed most of its Java technologies\index{Java technologies} under the GPL-2.0-only license.
 Oracle offers its own HotSpot Java Virtual Machine, however the official reference implementation is the OpenJDK\index{OpenJDK} JVM\index{JVM} which is free open-source software and used by most developers
 and is the default JVM for almost all Linux distributions\index{Linux distributions}.
+\linebreak
+\linebreak
+As of March 2022, Java 18 is the latest version, while Java 17, 11 and 8 are the current long-term support (LTS) versions.
+Oracle released the last zero-cost public update for the legacy version Java 8 LTS in January 2019 for commercial use,
+although it will otherwise still support Java 8 with public updates for personal use indefinitely.
+Other vendors have begun to offer zero-cost builds of OpenJDK 18 and 8, 11 and 17 that are still receiving security and other upgrades.
 
 % 
 % Figure 1 : James Gosling
@@ -147,7 +154,7 @@ and is the default JVM for almost all Linux distributions\index{Linux distributi
 % 
 \part{Pre-Basic of JAVA}
 
-JAVA is a vast programming language, but it has some pre basic things, on whichs the whole language depends on. In this part we'll going to discuss It
+JAVA is a vast programming language, but it has some pre basic things, on whichs the whole language depends on. In this part we'll going to discuss it.
 
 % 
 % Chapter 2
@@ -339,6 +346,9 @@ That means the line will break and go to a new line after showing the output ins
 \section{Escape Sequence}
 Escape sequences\cite{Ref4}\index{Escape Sequences} are some special characters who perfoms some special kinds of works on showing console output as like printing a backslash or a new line.
 Escape sequences are written after a backslash indicating it is a special character. And it is been written inside double quote marks("").
+% 
+% Table 1
+%
 \begin{table}[htbp]
     \begin{tabular}{cl}
         Escape Sequence                  & \multicolumn{1}{c}{Meaning}                                                                                        \\
@@ -399,7 +409,9 @@ Escape sequences are written after a backslash indicating it is a special charac
 Format Specifier\cite{Ref5} is used to indicate the place where the value of a variable should appear in a string. That means sometimes we have to show the output inside a line, as like.
 Hii! I am \{age\} year old. here we want age = 22 or something just like that. So we'll write  System.out.println("Hii! I am \%d year old.",age); Here output will be if age = 22,
 Hii! I am 22 year old.
-
+% 
+% Table 2
+%
 \begin{table}[htbp]
     \begin{tabular}{ccl}
         Format Specifier & Usual Variable Type & \multicolumn{1}{c}{Display As}                                                                              \\
@@ -456,7 +468,7 @@ Hii! I am 22 year old.
     \end{verbatim}
 \end{center}
 % 
-% Figure 3 :Format Specifier in java
+% Figure 4 : Format Specifier in java
 % 
 \begin{figure}[htbp]
     \begin{center}
@@ -464,12 +476,301 @@ Hii! I am 22 year old.
         \caption{Format Specifier\cite{Ref5}\cite{Ref3}}
     \end{center}
 \end{figure}
+% 
+% Section 3.3
+%
+\section{Comments}
+Comments\index{Comment} are basically sidenotes, means the thing that is only needed for programmers not the endusers. Naturally  programmers use comments to explain what the code is doing to himself
+or to other programmers. Sometimes the codes are too big and it becomes really very hard to understand what a specific portion of code is doing. On that postion, comments help to understand
+the workflow as all the codes looks like kind of same. These comments do no appear on output There are 3 kinds of comments in JAVA. Those are,
+\begin{itemize}
+    \item Single line comments
+    \item Multi line comments
+    \item Documentational comments
+\end{itemize}
+% 
+% Subsection 3.3.1
+%
+\subsection{Single Line Comments}
+This comments contains just one line. This kinds of comments are used by using just double forward slashes(//).
+% 
+% Subsection 3.3.2
+%
+\subsection{Multi Line Comments}
+This comments contains just as many as line we take. This kinds of comments started with just one forward slash and one star(/*) and ends with one star and one forward slash(*/)
+% 
+% Subsection 3.3.3
+%
+\subsection{Documentational Comments}
+This comments contains just as many as line we take. But these kinds of comments are used for documentation purpose only.
+This kinds of comments started with just one forward slash and two star(/**) and ends with one star and one forward slash(*/)
+% 
+% Subsection 3.3.4
+%
+\subsection{Syntax}
+\begin{itemize}
+    \item Single Line Comments $\to$ //Comments
+    \item Multi Line Comments $\to$ /*Comments*/
+    \item Documentational Comments $\to$ /**Comments*/
+\end{itemize}
+% 
+% Subsection 3.3.5
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        public class Test {
+            public static void main(String args[]) {
+                System.out.println("No Comments");
+                //System.out.println("Single Line Comment");
+                /*System.out.println("Multi Line Comment");*/
+               /** System.out.println("Documentational Comment");*/
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 5 : Comments in java
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{comments.png}}
+        \caption{Comments\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Section 3.4
+% 
+\section{User Input from Console in JAVA}
+A program is successful when it can take user inputs\cite{Ref7} and perform their task based on it appropiately.
+So, in that case, we have to take user inputs. For this we have to declare an object of Scanner class.
+In short, we have to write this line must \tt{\textit{Scanner input = new Scanner(System.in);}}.
+And to take input we have to use input.nextDataType(), here if we want to take integer, then we have to use input.nextInt();
+% 
+% Table 3
+%
+\begin{table}[htbp]
+    \begin{tabular}{ll}
+        Method              & Description          \\
+        nextBoolean()       & Reads Boolean values \\
+        nextByte()          & Reads byte value     \\
+        nextDouble()        & Reads double value   \\
+        nextFloat()         & Reads float value    \\
+        nextInt()           & Reads int value      \\
+        nextLine()          & Reads String value   \\
+        \textbf{nextLong()} & Reads long value     \\
+        nextShort()         & Reads short value    \\
+        next().charAt(0)    & Reads Char value
+    \end{tabular}
+    \centering
+    \caption{User Input Type}
+\end{table}
+% 
+% Subsection 3.4.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        Scanner input = new Scanner(System.in);
+        variableName = input.nextDataType();
+    }
+\end{center}
+% 
+% Subsection 3.4.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
 
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                int i;
+                double d;
+                String s;
+                char c;
+                System.out.print("Enter an integer value = ");
+                i = input.nextInt();
+                System.out.print("Enter a double value = ");
+                d = input.nextDouble();
+                input.nextLine();
+                System.out.print("Enter an String line = ");
+                s = input.nextLine();
+                System.out.print("Enter a character = ");
+                c = input.next().charAt(0);
+                System.out.println();
+                System.out.println();
+                System.out.println("Integer value given = "+i);
+                System.out.println("Double value given = "+d);
+                System.out.println("String value given = "+s);
+                System.out.println("Character value given = "+c);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 6 : User Input
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{userInput.png}}
+        \caption{User Input\cite{Ref7}\cite{Ref3}}
+    \end{center}
+\end{figure}
 
+% 
+% Part 3
+% 
+\part{Basics of JAVA}
+JAVA is a vast programming language, but it has some basic things too, on
+whichs the whole language also depends on. In this part we'll going to discuss those things.
+% 
+% Chapter 4
+% 
+\chapter{Variables and Data Types}
+% 
+% Section 4.1
+% 
+\section{Variables}
+Variables means a place where we store some data. As like if we want to store water, then we'll take a pot like bottles.
+Variables are like similar pots but we store data here. To write variables, we need dataTypes.
+% 
+% Subsection 4.1.1
+%
+\subsection{Variable Declaration}
+Variable declaration means just declare where the data we want to store, but not store at the same time. we should store later there.
+% 
+% Subsection 4.1.2
+%
+\subsection{Variable Initialization}
+Variable initialization means store values in variables which has already been declared previously by us. After that, we can store later there.
+% 
+% Subsection 4.1.3
+%
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{accessModifier dataType variableName; // Variable Declaration}\\
+        \null\textit{accessModifier dataType variableName = value; // Variable Initialization}
+    }
+\end{center}
+% 
+% Subsection 4.1.4
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        public class Test {
+            public static void main(String args[]) {
+                String name ; // Variable Declaration
+                int age = 19; // Variable Initialization
 
-
-
-
+                name = "Ritu Das";
+                System.out.println("Name = "+name);
+                System.out.println("Age = "+age);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 7 : Variable
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \quad\quad\fbox{\includegraphics*[width=8cm]{variables.png}}
+        \caption{Variable\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Subsection 4.1.5
+%
+\subsection{Rules to write Variables \& Functions Name}
+\begin{itemize}
+    \item We can use Alphabets both Capital Letter(A-Z) \& Small Letter(a-z) for variable name.
+    \item We can use Numerical values (0 $\to$ 9), Underscore(\_) \& Dollar Sign(\$) for variable name.
+    \item Variable names can not be started with Numerical values (0 $\to$ 9) or any charater except Alphabets both Capital Letter(A-Z) \& Small Letter(a-z).
+    \item Any keyword can not be a variable name.
+    \item There can not be any spaces inside a variable/function name.
+    \item We can use maximum 31 characters for the name of variables/functions. But using maximum 8 characters is standard.
+\end{itemize}
+% 
+% Section 4.2
+% 
+\section{Data Types}
+Data Types\cite{Ref6} are basically types of pots that are used to store data inside it. As an example, if we want to store a football we can just use net(Not Internet) bags.
+But if we want to store water then we'll need bottles. Data Types are same. if we want to store integer numbers then we have to use integer type of variable not the boolean or another type.
+% 
+% Figure 8 : Data Types
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{dataTypes.png}}
+        \caption{Data Types\cite{Ref6}}
+    \end{center}
+\end{figure}
+% 
+% Table 4
+% 
+\begin{table}[htbp]
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        Type Name & Description                                                        & Size   & Range                                                                                    & \begin{tabular}[c]{@{}l@{}}Simpel Declaration \&\\ Initialization\end{tabular} \\ \hline
+        boolaen   & true or false                                                      & 1 Bit  & \{true,false\}                                                                           & boolean x = true;                                                              \\ \hline
+        char      & \begin{tabular}[c]{@{}l@{}}Unicode \\ Character\end{tabular}       & 2 Byte & u0000 to uFFFF                                                                           & char x = 'a';                                                                  \\ \hline
+        byte      & \begin{tabular}[c]{@{}l@{}}Signed\\ Integer\end{tabular}           & 1 Byte & -128 to 127                                                                              & byte x = 12;                                                                   \\ \hline
+        short     & \begin{tabular}[c]{@{}l@{}}Signed \\ Integer\end{tabular}          & 2 Byte & -32768  to 32767                                                                         & short x = 12345;                                                               \\ \hline
+        int       & \begin{tabular}[c]{@{}l@{}}Signed \\ Integer\end{tabular}          & 4 Byte & \begin{tabular}[c]{@{}l@{}}-2147483648 to \\ 2147483647\end{tabular}                     & int x = 123456                                                                 \\ \hline
+        long      & \begin{tabular}[c]{@{}l@{}}Signed \\ Integer\end{tabular}          & 8 Byte & \begin{tabular}[c]{@{}l@{}}-9223372036854775808 to \\  -9223372036854775807\end{tabular} & long x = 0;                                                                    \\ \hline
+        float     & \begin{tabular}[c]{@{}l@{}}IEEE 754 \\ floating point\end{tabular} & 4 Byte & \begin{tabular}[c]{@{}l@{}}$\pm$ 1.4E-45 to \\ $\pm$ 3.44028235E+38\end{tabular}         & float x = 10.2f                                                                \\ \hline
+        double    & \begin{tabular}[c]{@{}l@{}}IEEE 754 \\ floating point\end{tabular} & 8 Byte & \begin{tabular}[c]{@{}l@{}}$\pm$4.9E-324 to \\ $\pm$1.7976931348623157E+308\end{tabular} & double x = 21.3                                                                \\ \hline
+    \end{tabular}
+    \centering
+    \caption{Data Type}
+\end{table}
+% 
+% Subsection 4.2.1
+%
+\newpage
+\null\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{accessModifier dataType variableName;}
+    }
+\end{center}
+% 
+% Subsection 4.2.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        public class Test {
+            public static void main(String args[]) {
+                int i = 1234567890; //10 Digit storable, shouldn't put 0 at first
+                boolean b = true;   // Only true/false or 1/0 allowed
+                char c = 'a';       // 1 charater storable at a time & single quote must
+                short s = 12345;    // 5 digits storable
+                float f = 10.2f;    // We have to put f at the edge of the value for float
+                double d = 344.659; // JAVA's default decimal type is double
+                System.out.println("boolean b = "+b);
+                System.out.println("charater c = "+c);
+                System.out.println("short s = "+s);
+                System.out.println("integer i = "+i);
+                System.out.println("float f = "+f);
+                System.out.println("double d = "+d);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 9 : Data Type
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{dataTypesExample.png}}
+        \caption{Data Type\cite{Ref3}}
+    \end{center}
+\end{figure}
 
 
 
@@ -493,9 +794,21 @@ Hii! I am 22 year old.
     \bibitem{Ref2} James Gosling, \url{https://en.wikipedia.org/wiki/James_Gosling}
     \bibitem{Ref3} Java Compiler, \url{https://www.jdoodle.com/online-java-compiler/}
     \bibitem{Ref4} Escape Sequence, \url{https://docs.oracle.com/javase/tutorial/java/data/characters.html}
-    \bibitem{Ref5} Specifier, \url{https://www.geeksforgeeks.org/format-specifiers-in-java/}
+    \bibitem{Ref5} Format Specifier,  \footnotesize{\url{https://www.geeksforgeeks.org/format-specifiers-in-java/}}
+    \bibitem{Ref6} DataType, \url{https://www.javatpoint.com/java-data-types}
+    \bibitem{Ref7} User Input, \url{https://www.w3schools.com/java/java_user_input.asp}
 \end{thebibliography}
 
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
 % \index{Index B}
@@ -520,3 +833,23 @@ Hii! I am 22 year old.
 \index{Private}
 
 \cite{Ref1}
+
+% 
+% Subsection 3.2.1
+%
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{"\%formatSpecifier"}
+    }
+\end{center}
+
+% 
+% Subsection 3.2.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        ...
+    \end{verbatim}
+\end{center}
