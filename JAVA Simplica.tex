@@ -4,6 +4,7 @@
 \usepackage{graphicx}                   %  For Inserting List of Figures
 \usepackage{index}                      %  For Inserting Index in the document
 \usepackage{url,hyperref}               %  For Inserting Index in the document
+\usepackage[xindy]{imakeidx}            %  For Inserting Index in Alphabetical order
 
 \makeindex                              %  For Inserting Index in the document
 
@@ -101,6 +102,9 @@
 \listoftables
 \newpage
 
+% 
+% Part 1
+% 
 \part{Introduction}
 JAVA is a Programming language which is used mostly in offial softwares because of it's strong security system.
 It is a high-level language which uses JVM to convert the high-level code to a machine code.
@@ -116,36 +120,102 @@ This processs is both insecure and costly. In this book I just tried to teach JA
 people can start doing their school/college projects howmeworks and others by their own having simple knowledge. Thus, they can learn the vast knowledge slowly and more interesting way.
 
 \addcontentsline{toc}{chapter}{Preface}
-
+% 
+% Chapter 1
+% 
 \chapter{History of JAVA}
-Java was originally developed by James Gosling at Sun Microsystems and released in May 1995 as a core component of Sun Microsystems' Java platform.
-The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary licenses.
-As of May 2007, in compliance with the specifications of the Java Community Process, Sun had relicensed most of its Java technologies under the GPL-2.0-only license.
-Oracle offers its own HotSpot Java Virtual Machine, however the official reference implementation is the OpenJDK JVM which is free open-source software and used by most developers
-and is the default JVM for almost all Linux distributions.
+Java was originally developed by James Gosling \index{James Gosling} at Sun Microsystems and released in May 1995 as a core component of Sun Microsystems' Java platform.
+The original and reference implementation Java compilers\index{Java compilers}, virtual machines\index{virtual machines}, and class libraries\index{class libraries} were originally released by Sun under proprietary licenses.
+As of May 2007, in compliance with the specifications of the Java Community Process, Sun had relicensed most of its Java technologies\index{Java technologies} under the GPL-2.0-only license.
+Oracle offers its own HotSpot Java Virtual Machine, however the official reference implementation is the OpenJDK\index{OpenJDK} JVM\index{JVM} which is free open-source software and used by most developers
+and is the default JVM for almost all Linux distributions\index{Linux distributions}.
 
-\section{First section of First Chapter}
-\subsection{Subsection of First section of First chapter}
-\subsubsection{Sub Sub section of First section of First chapter}
-\index{Index A}
+% 
+% Figure 1 : James Gosling
+% 
+\addtocontents{lof}{Figure DESCRIPTION}
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{JamesGosling.jpg}}
+        \caption{James Gosling}
+    \end{center}
+\end{figure}
 
-\part{Basic of JAVA}
-\index{Index B}
-\chapter{Chapter 2 of Part 2}
-\index{Index C}
-\addtocontents{toc}{DESCRIPTION} % Used for writing a DESCRIPTION of any chapter/section, It means the name will added in contents but page no does not appear
-\section{Section of Chapter 2 of part 2}
+
+% 
+% Part 2
+% 
+\part{Pre-Basic of JAVA}
+
+JAVA is a vast programming language, but it has some pre basic things, on whichs the whole language depends on. In this part we'll going to discuss It
+% 
+% Chapter 2
+% 
+\chapter{Package \& Class Declaration}
+% 
+% Section 2.1
+% 
+\section{package}
+Package is kind of a folder, where all the class files are present. we can use them by using the keyword \textit{import packageName.subPackageName.className} or
+\textit{import packageName.*}. Here * means all the things. we can use predefined packages of jdk or we can also import out own packages in any class from another folder.
+% 
+% Subsection 2.1.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{import packageName.subPackageName.className}
+    }
+\end{center}
+% 
+% Subsection 2.1.2
+% 
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        java.io.File;
+    \end{verbatim}
+\end{center}
+% 
+% Section 2.2
+% 
+\section{Access modifiers}
+Access modifires basically used to control the access of the variables \& methods form another class or package. It is mostly used in Encapsulation\index{Encapsulation}.
+There are basically 4 Access modifiers. Those are,
+\begin{itemize}
+    \item Public
+    \item Private
+    \item Protected
+    \item Default
+\end{itemize}
+% 
+% Subsection 2.2.1
+%
+\subsection{Public}
+Public Keyword is used to make the variables and methods Public that means those thing can be access from anywhere, no matter where it is.
+% 
+% Subsection 2.2.2
+%
+\subsection{Private}
+Private Keyword is used to make the variables and methods inaccessible that means those thing can be access from nowhere, no matter where it is.
 
 
 \printindex
 
 \begin{thebibliography}{90}
     \bibitem{Ref1} Java-Wikipedia, \url{https://en.wikipedia.org/wiki/Java_(programming_language)}
+    \bibitem{Ref2} James Gosling, \url{https://en.wikipedia.org/wiki/James_Gosling}
     \bibitem{Ref2} Author2, \textit{paper2}, publisher2, year2
     \bibitem{Ref3} Author3, \textit{paper3}, publisher3, year3
 \end{thebibliography}
 
 \end{document}
+
+% \index{Index B}
+% \chapter{Chapter 2 of Part 2}
+% \index{Index C}
+% \addtocontents{toc}{DESCRIPTION} % Used for writing a DESCRIPTION of any chapter/section, It means the name will added in contents but page no does not appear
+% \section{Section of Chapter 2 of part 2}
 
 % Figure
 % \addtocontents{lof}{Figure DESCRIPTION}
@@ -155,3 +225,7 @@ and is the default JVM for almost all Linux distributions.
 %         \caption{Figure Title/Caption}
 %     \end{center}
 % \end{figure}
+
+% 
+% Part 1
+% 
