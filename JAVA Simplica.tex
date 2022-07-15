@@ -335,8 +335,8 @@ That means the line will break and go to a new line after showing the output ins
 \chapter{Escape Sequence \& Format Specifier}
 % 
 % Section 3.1
-% 
-\section{Escape Sequences}
+%
+\section{Escape Sequence}
 Escape sequences\cite{Ref4}\index{Escape Sequences} are some special characters who perfoms some special kinds of works on showing console output as like printing a backslash or a new line.
 Escape sequences are written after a backslash indicating it is a special character. And it is been written inside double quote marks("").
 \begin{table}[htbp]
@@ -354,7 +354,6 @@ Escape sequences are written after a backslash indicating it is a special charac
     \centering
     \caption{Escape Sequences}
 \end{table}
-\chapter{Escape Sequence \& Format Specifier}
 % 
 % Subsection 3.1.1
 %
@@ -370,18 +369,18 @@ Escape sequences are written after a backslash indicating it is a special charac
 \subsection{Example}
 \begin{center}
     \begin{verbatim}
-      public class Test {
-      public static void main(String args[]) {
-      System.out.println("HELLO\b WORLD !");
-      System.out.println("HELLO\t WORLD !");
-      System.out.println("HELLO\n WORLD !");
-      System.out.println("HELLO\r WORLD !");
-      System.out.println("HELLO \"WORLD\" !");
-      System.out.println("HELLO \`W\'ORLD !");
-      System.out.println("HELLO\f WORLD !");
-      System.out.println("HELLO \\WORLD !");
-    }
-}
+        public class Test {
+            public static void main(String args[]) {
+                System.out.println("HELLO\b WORLD !");
+                System.out.println("HELLO\t WORLD !");
+                System.out.println("HELLO\n WORLD !");
+                System.out.println("HELLO\r WORLD !");
+                System.out.println("HELLO \"WORLD\" !");
+                System.out.println("HELLO \`W\'ORLD !");
+                System.out.println("HELLO\f WORLD !");
+                System.out.println("HELLO \\WORLD !");
+            }
+        }
     \end{verbatim}
 \end{center}
 % 
@@ -393,6 +392,87 @@ Escape sequences are written after a backslash indicating it is a special charac
         \caption{Escape Sequences\cite{Ref4}\cite{Ref3}}
     \end{center}
 \end{figure}
+% 
+% Section 3.2
+%
+\section{Format Specifier}
+Format Specifier\cite{Ref5} is used to indicate the place where the value of a variable should appear in a string. That means sometimes we have to show the output inside a line, as like.
+Hii! I am \{age\} year old. here we want age = 22 or something just like that. So we'll write  System.out.println("Hii! I am \%d year old.",age); Here output will be if age = 22,
+Hii! I am 22 year old.
+
+\begin{table}[htbp]
+    \begin{tabular}{ccl}
+        Format Specifier & Usual Variable Type & \multicolumn{1}{c}{Display As}                                                                              \\
+        \%f\%f           & float or double     & Signed Decimal                                                                                              \\
+        \%o              & int                 & unsigned Octal value                                                                                        \\
+        \%u              & int                 & unsigned Integer                                                                                            \\
+        \%x              & int                 & unsigned Hex value                                                                                          \\
+        \%H              & int                 & unsigned Decimal Integer                                                                                    \\
+        \%S              & array of char       & Sequence of Characters                                                                                      \\
+        \%\%             & -                   & Inserts a \% sign                                                                                           \\
+        \%f              & float               & Decimal floating-point                                                                                      \\
+        \%e\%E           & -                   & \begin{tabular}[c]{@{}l@{}}Scientific Notation /\\ Exponential Format\end{tabular}                          \\
+        \%g              & -                   & \begin{tabular}[c]{@{}l@{}}Causes formatter to use \\ either \%f or \%e which one\\ is shorter\end{tabular} \\
+        \%h\%H           & -                   & Hash code of the Argument                                                                                   \\
+        \%d              &                     & Decimal Integer                                                                                             \\
+        \%c              & \textbf{}           & Character                                                                                                   \\
+        \%b\%B           & boolean             & Boolean                                                                                                     \\
+        \%a\%A           & -                   & Floating Point hexadecimal
+    \end{tabular}
+    \centering
+    \caption{Format Specifier}
+\end{table}
+% 
+% Subsection 3.2.1
+%
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{"\%formatSpecifier"}
+    }
+\end{center}
+% 
+% Subsection 3.2.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        public class Test {
+            public static void main(String args[]) {
+                int i = 1234567890;
+                boolean b = true;
+                char c = 'a';
+                short s = 12345;
+                float f = 10.2f;
+                double d = 344.659;
+                System.out.printf("boolean b = %b\n",b);
+                System.out.printf("charater c = %c\n",c);
+                System.out.printf("short s = %d\n",s);
+                System.out.printf("integer i = %d\n",i);
+                System.out.printf("float f = %1f\n",f);
+                System.out.printf("double d = %3f\n",d);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 3 :Format Specifier in java
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{formatSpecifier.png}}
+        \caption{Format Specifier\cite{Ref5}\cite{Ref3}}
+    \end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -413,6 +493,7 @@ Escape sequences are written after a backslash indicating it is a special charac
     \bibitem{Ref2} James Gosling, \url{https://en.wikipedia.org/wiki/James_Gosling}
     \bibitem{Ref3} Java Compiler, \url{https://www.jdoodle.com/online-java-compiler/}
     \bibitem{Ref4} Escape Sequence, \url{https://docs.oracle.com/javase/tutorial/java/data/characters.html}
+    \bibitem{Ref5} Specifier, \url{https://www.geeksforgeeks.org/format-specifiers-in-java/}
 \end{thebibliography}
 
 \end{document}
