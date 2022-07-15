@@ -180,7 +180,7 @@ Package is kind of a folder, where all the class files are present. we can use t
 % Section 2.2
 % 
 \section{Access modifiers}
-Access modifires basically used to control the access of the variables \& methods form another class or package. It is mostly used in Encapsulation\index{Encapsulation}.
+Access\index{Access} modifires basically used to control the access of the variables \& methods form another class or package. It is mostly used in Encapsulation\index{Encapsulation}.
 There are basically 4 Access modifiers. Those are,
 \begin{itemize}
     \item Public
@@ -192,18 +192,33 @@ There are basically 4 Access modifiers. Those are,
 % Subsection 2.2.1
 %
 \subsection{Public}
-Public Keyword is used to make the variables and methods Public that means those thing can be access from anywhere, no matter where it is.
+Public\index{Public} Keyword is used to make the variables and methods Public that means those thing can be access from anywhere, no matter where it is.
 % 
 % Subsection 2.2.2
 %
 \subsection{Private}
-Private Keyword is used to make the variables and methods inaccessible that means those thing can be access from nowhere, no matter where it is.
+Private\index{Private} Keyword is used to make the variables and methods inaccessible that means those thing can be access from nowhere, no matter where it is.
+% 
+% Subsection 2.2.3
+%
+\subsection{Protected}
+Protected Keyword is used to make the variables and methods only accessible from their children that means those thing can be access from nowhere except its child class,
+no matter where it is. IF a class is extended by another class then the class who extend in it, called child\index{Child Class} class of the class who got extended by the child class.
+And that class who got extended by the child class called parent\index{Parent Class} Class.
+% 
+% Subsection 2.2.3
+%
+\subsection{Default}
+Protected Keyword is used to make the variables and methods only accessible from their children that means those thing can be access from nowhere except its child class,
+no matter where it is. IF a class is extended by another class then the class who extend in it, called child\index{Child Class} class of the class who got extended by the child class.
+And that class who got extended by the child class called parent\index{Parent Class} Class.
+
 
 
 \printindex
 
 \begin{thebibliography}{90}
-    \bibitem{Ref1} Java-Wikipedia, \url{https://en.wikipedia.org/wiki/Java_(programming_language)}
+    \bibitem{Ref1} Java, \url{https://en.wikipedia.org/wiki/Java_(programming_language)}
     \bibitem{Ref2} James Gosling, \url{https://en.wikipedia.org/wiki/James_Gosling}
     \bibitem{Ref2} Author2, \textit{paper2}, publisher2, year2
     \bibitem{Ref3} Author3, \textit{paper3}, publisher3, year3
@@ -229,3 +244,4 @@ Private Keyword is used to make the variables and methods inaccessible that mean
 % 
 % Part 1
 % 
+\index{Private}
