@@ -1340,7 +1340,7 @@ For Loops are also called incremental loops. We use this loop, when we know exac
             System.out.println("1+2+3+4+5+.......+n");
             System.out.print("Enter the last number of the linear series : ");
             int n = input.nextInt();
-            for (int i = 1; i <= n; i++){
+            for(int i = 1; i <= n; i++){
                 result = result + i;
             }
             System.out.println("The Addtion result of the whole series is = " + result);
@@ -1361,7 +1361,117 @@ For Loops are also called incremental loops. We use this loop, when we know exac
 % Subsection 6.2.2
 % 
 \subsection{While Loops}
-While loops are also called conditional loops. Because we use conditions in this loop. As an exaple,
+While loops are also called conditional loops. Because we use conditions in this loop. As an exaple, we can do a repeated task until the user put a specific value.
+% 
+% Susubbsection 6.2.2.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \begin{verbatim}
+        initialization;
+        while(condiion){
+            //statements;
+            //statements;
+            increment/decrement;
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Susubbsection 6.2.2.2
+% 
+\subsubsection{Example}
+\begin{center}
+    \footnotesize
+    \begin{verbatim}
+        import java.util.Scanner;
+        public class Test{
+            public static void main(String args[]){
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter nmber >> ");
+                int x = input.nextInt(); // Initialization
+                while (x > 0){
+                    System.out.println(x); // Statements
+                    x--; // Decrement
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 16 : While Loop
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{whileLoop.png}}
+        \caption{While Loop\cite{Ref3}}
+    \end{center}
+\end{figure}
+
+\newpage
+
+% 
+% Subsection 6.2.3
+% 
+\subsection{Do-While Loops}
+Do while loops are similar like while loop, just the difference is, while loop checks condition at the first, but in do while, it checks at the last.
+And if condition is wrong at the first, then while loop doesn't work, but as do while checks the condition at the last, so do while loop runs minimum one time
+though the condition is wrong.
+% 
+% Susubbsection 6.2.3.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \begin{verbatim}
+        initialization;
+        do{
+            //statements;
+            //statements;
+            increment/decrement;
+        }while(condiion);
+    \end{verbatim}
+\end{center}
+% 
+% Susubbsection 6.2.3.2
+% 
+\subsubsection{Example}
+\begin{center}
+    \footnotesize
+    \begin{verbatim}
+        import java.util.Scanner;
+        public class Test{
+            public static void main(String args[]){
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter 1st nmber >> ");
+                int x = input.nextInt();
+                System.out.print("Enter 2nd nmber >> ");
+                int y = input.nextInt();
+                do{
+                    System.out.println("Condition Is already wrong");
+                    x--;
+                }while (x / y == 0);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 17 : Do-While Loop
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{doWhileLoop.png}}
+        \caption{Do While Loop\cite{Ref3}}
+    \end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
 
 
 
