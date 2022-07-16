@@ -772,8 +772,227 @@ But if we want to store water then we'll need bottles. Data Types are same. if w
     \end{center}
 \end{figure}
 
+% 
+% Chapter 5
+% 
+\chapter{Operators}
+Operators are some special characters which performs some special tasks like data assignation addition subtraction or decides equal or not greater or not.
+There are 8 kinds of operators. Those are,
+\begin{itemize}
+    \item Arithmatic Operators
+    \item Assignment Operators
+    \item Unary Operators
+    \item Relational Operators
+    \item Logical Operators
+    \item Bitwise Operators
+    \item Shift Operators
+    \item Ternary Operators
+\end{itemize}
+% 
+% Figure 10 : Operators
+%
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{operators.png}}
+        \caption{Operators\cite{Ref8}}
+    \end{center}
+\end{figure}
+% 
+% Section 5.1
+% 
+\section{Arithmetic Operators}
+Arithmetic operators are those we use for arithhmatc operations like addition, subtraction, multiplication etc.
+% 
+% Table 5
+% 
+\begin{table}[htbp]
+    \begin{tabular}{clll}
+        \multicolumn{1}{l}{Operator} & Task           & Example & Output \\
+        +                            & Addition       & X=15+6  & X=21   \\
+        -                            & Subtraction    & X=15-6  & X=9    \\
+        $*$                          & Multiplication & X=15*6  & X=90   \\
+        /                            & Division       & X=15/6  & X=2    \\
+        \%                           & Modulus        & X=15\%6 & X=3
+    \end{tabular}
+    \centering
+    \caption{Arithmetic Table}
+\end{table}
+% 
+% Section 5.2
+% 
+\section{Assignment Operators}
+Assignment operators are those we use for assigning values into variables like Equal to etc.
+% 
+% Table 6
+% 
+\begin{table}[htbp]
+    \begin{tabular}{cll}
+        Operator & Example & Full Form \\
+        =        & y=x+5   & y=x+5     \\
+        +=       & x+=5    & x=x+5     \\
+        -=       & x-=5    & x=x-5     \\
+        *=       & x*=5    & x=x*5     \\
+        /=       & x/=5    & x=x/5
+    \end{tabular}
+    \centering
+    \caption{Assignment Operators}
+\end{table}
+% 
+% Section 5.3
+% 
+\section{Unary Operators}
+Unary operators are also called single operators. I means these kinds of operators need just one varible to perform their tasks.
+% 
+% Table 7
+% 
+\begin{table}[htbp]
+    \begin{tabular}{cl}
+        Unary Operator & Meaning     \\
+        +              & Unary Plus  \\
+        -              & Unary Minus \\
+        ++             & Increment   \\
+        --             & Decrement
+    \end{tabular}
+    \centering
+    \caption{Unary Operators}
+\end{table}
+Unary operators are also 2 kinds. those are,
+\begin{itemize}
+    \item Prefix
+    \item Postfix
+\end{itemize}
+% 
+% Subsection 5.3.1
+% 
+\subsection{Prefix}
+These kinds of operators increment/decrement their value first then perform their tasks.
+% 
+% Table 8
+% 
+\begin{table}[htbp]
+    \begin{tabular}{cl}
+        Unary Operator & Meaning         \\
+        ++expr         & Increment First \\
+        --expr         & Decrement First
+    \end{tabular}
+    \centering
+    \caption{Prefix Operators}
+\end{table}
+% 
+% Subsection 5.3.2
+% 
+\subsection{Postfix}
+These kinds of operators perform their task first then they increment/decrement their value.
+% 
+% Table 9
+%
+\begin{table}[htbp]
+    \begin{tabular}{cl}
+        Unary Operator & Meaning          \\
+        expr++         & Increment  Later \\
+        expr--         & Decrement Later
+    \end{tabular}
+    \centering
+    \caption{Postfix Operators}
+\end{table}
+% 
+% Section 5.4
+% 
+\section{Relational Operators}
+These kinds of operators are needed to create relations between 2 variables. As like which one is greater or smaller between 2 operators etc.
+% 
+% Table 10
+%
+\begin{table}[htbp]
+    \begin{tabular}{ccc}
+        Operator        & Use                   & Description        \\
+        \textgreater{}  & Op1\textgreater{}Op2  & Greater Than       \\
+        \textgreater{}= & Op1\textgreater{}=Op2 & Greater Than Equal \\
+        \textless{}     & Op1\textless{}Op2     & Less Than          \\
+        \textless{}=    & Op1\textless{}=Op2    & Less Than Equal    \\
+        ==              & Op1==Op2              & Both are Equal     \\
+        !               & Op1!=Op2              & Are not Equal
+    \end{tabular}
+    \centering
+    \caption{Relational Operators}
+\end{table}
 
+\newpage
 
+% 
+% Section 5.5
+% 
+\section{Bitwise Operators}
+Bitwise operators are used to performing the manipulation of individual bits of a number.
+They can be used with any integral type (char, short, int, etc.). They are used when performing update and query operations of the Binary indexed trees.
+% 
+% Table 11
+%
+\begin{table}[htbp]
+    \begin{tabular}{cl}
+        Operator           & \multicolumn{1}{c}{Description} \\
+        \&                 & Bitwise AND                     \\
+        \textasciicircum{} & Bitwise Exclusive OR            \\
+        $\vert$            & Bitwise Inclusive OR
+    \end{tabular}
+    \centering
+    \caption{Bitwise Operators}
+\end{table}
+% 
+% Section 5.6
+% 
+\section{Logical Operators}
+Logical operators are used to check whether an expression is true or false . They are used in decision making.
+% 
+% Table 12
+%
+\begin{table}[htbp]
+    \begin{tabular}{cc}
+        Operators      & Description \\
+        \&\&           & Logical AND \\
+        $\vert$$\vert$ & Logical OR
+    \end{tabular}
+    \centering
+    \caption{Logical Operators}
+\end{table}
+% 
+% Section 5.7
+% 
+\section{Ternary Operators}
+The Java ternary operator lets us write an if statement on one line of code.
+A ternary operator can either evaluate to true or false.
+It returns a specified value depending on whether the statement evaluates to true or false. We use Java if…else statements to control the flow of a program.
+% 
+% Table 13
+%
+\begin{table}[htbp]
+    \begin{tabular}{|c|c|l|}
+        \hline
+        Operators & Syntax                    & \multicolumn{1}{c|}{Example}                                                   \\ \hline
+        ? :       & x\textless{}=y?true:false & x\textless{}=y?System.out.println("X bigger") : System.out.println("Y bigger") \\ \hline
+    \end{tabular}
+    \caption{Ternary Operators}
+\end{table}
+% 
+% Section 5.8
+% 
+\section{Shift Operators}
+The shift operator is used when we're performing logical bits operations, as opposed to mathematical operations.
+It can be used for speed, being significantly faster than division/multiplication when dealing with operands that are powers of two,
+but clarity of code is usually preferred over raw speed.
+% 
+% Table 14
+%
+\begin{table}[htbp]
+    \begin{tabular}{cl}
+        Operators                                  & Description                                                                                  \\
+        \textless{}\textless{}                     & Left Shift                                                                                   \\
+        \textgreater{}\textgreater{}               & Right Shift                                                                                  \\
+        \textgreater{}\textgreater{}\textgreater{} & \begin{tabular}[c]{@{}l@{}}Changes parity bit (MSB) to 0\\ For Negative Numbers\end{tabular}
+    \end{tabular}
+    \centering
+    \caption{Shift Operators}
+\end{table}
 
 
 
@@ -797,6 +1016,7 @@ But if we want to store water then we'll need bottles. Data Types are same. if w
     \bibitem{Ref5} Format Specifier,  \footnotesize{\url{https://www.geeksforgeeks.org/format-specifiers-in-java/}}
     \bibitem{Ref6} DataType, \url{https://www.javatpoint.com/java-data-types}
     \bibitem{Ref7} User Input, \url{https://www.w3schools.com/java/java_user_input.asp}
+    \bibitem{Ref8} User Input, \url{https://www.qafox.com/java-for-testers-different-types-of-operators-in-java/}
 \end{thebibliography}
 
 
