@@ -7,6 +7,7 @@
 \usepackage[xindy]{imakeidx}            %  For Inserting Index in Alphabetical order
 \usepackage{float}                      %  For Preventing Table Repositioning
 
+
 \makeindex                              %  For Inserting Index in the document
 
 \definecolor{smokeWhite}{HTML}{F5F5F5}
@@ -744,6 +745,7 @@ But if we want to store water then we'll need bottles. Data Types are same. if w
 %
 \subsection{Example}
 \begin{center}
+    \footnotesize
     \begin{verbatim}
         public class Test {
             public static void main(String args[]) {
@@ -769,7 +771,7 @@ But if we want to store water then we'll need bottles. Data Types are same. if w
 \begin{figure}[htbp]
     \begin{center}
         \fbox{\includegraphics*[width=8cm]{dataTypesExample.png}}
-        \caption{Data Type\cite{Ref3}}
+        \caption{Data Type Chart\cite{Ref3}}
     \end{center}
 \end{figure}
 
@@ -967,15 +969,17 @@ It returns a specified value depending on whether the statement evaluates to tru
 % Table 13
 %
 \begin{table}[htbp]
+    \footnotesize
     \begin{tabular}{|c|c|l|}
         \hline
-        Operators & Syntax                    & \multicolumn{1}{c|}{Example}                                                   \\ \hline
-        ? :       & x\textless{}=y?true:false & x\textless{}=y?System.out.println("X bigger") : System.out.println("Y bigger") \\ \hline
+        Operators & Syntax                    & \multicolumn{1}{c|}{Example}                                           \\ \hline
+        ? :       & x\textless{}=y?true:false & x$<$=y?System.out.println("X bigger") : System.out.println("Y bigger") \\ \hline
     \end{tabular}
     \begin{center}
         \caption{Ternary Operators}
     \end{center}
 \end{table}
+
 % 
 % Section 5.8
 % 
@@ -1349,7 +1353,7 @@ For Loops are also called incremental loops. We use this loop, when we know exac
 \begin{figure}[htbp]
     \begin{center}
         \fbox{\includegraphics*[width=8cm]{forLoop.png}}
-        \caption{For Loop\cite{Ref3}}
+        \caption{For Loop}
     \end{center}
 \end{figure}
 % 
@@ -1357,6 +1361,7 @@ For Loops are also called incremental loops. We use this loop, when we know exac
 % 
 \subsection{While Loops}
 While loops are also called conditional loops. Because we use conditions in this loop. As an exaple,
+
 
 
 
