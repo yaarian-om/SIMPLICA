@@ -144,7 +144,7 @@ Other vendors have begun to offer zero-cost builds of OpenJDK 18 and 8, 11 and 1
 \begin{figure}[htbp]
     \begin{center}
         \fbox{\includegraphics*[width=8cm]{JamesGosling.jpg}}
-        \caption{James Gosling}
+        \caption{James Gosling\cite{Ref2}}
     \end{center}
 \end{figure}
 
@@ -551,16 +551,16 @@ And to take input we have to use input.nextDataType(), here if we want to take i
 %
 \begin{table}[htbp]
     \begin{tabular}{ll}
-        Method              & Description          \\
-        nextBoolean()       & Reads Boolean values \\
-        nextByte()          & Reads byte value     \\
-        nextDouble()        & Reads double value   \\
-        nextFloat()         & Reads float value    \\
-        nextInt()           & Reads int value      \\
-        nextLine()          & Reads String value   \\
-        \textbf{nextLong()} & Reads long value     \\
-        nextShort()         & Reads short value    \\
-        next().charAt(0)    & Reads Char value
+        Method           & Description          \\
+        nextBoolean()    & Reads Boolean values \\
+        nextByte()       & Reads byte value     \\
+        nextDouble()     & Reads double value   \\
+        nextFloat()      & Reads float value    \\
+        nextInt()        & Reads int value      \\
+        nextLine()       & Reads String value   \\
+        nextLong()       & Reads long value     \\
+        nextShort()      & Reads short value    \\
+        next().charAt(0) & Reads Char value
     \end{tabular}
     \centering
     \caption{User Input Type}
@@ -776,7 +776,7 @@ But if we want to store water then we'll need bottles. Data Types are same. if w
 % Chapter 5
 % 
 \chapter{Operators}
-Operators are some special characters which performs some special tasks like data assignation addition subtraction or decides equal or not greater or not.
+Operators\cite{Ref8} are some special characters which performs some special tasks like data assignation addition subtraction or decides equal or not greater or not.
 There are 8 kinds of operators. Those are,
 \begin{itemize}
     \item Arithmatic Operators
@@ -801,7 +801,7 @@ There are 8 kinds of operators. Those are,
 % Section 5.1
 % 
 \section{Arithmetic Operators}
-Arithmetic operators are those we use for arithhmatc operations like addition, subtraction, multiplication etc.
+Arithmetic operators\cite{Ref8} are those we use for arithhmatc operations like addition, subtraction, multiplication etc.
 % 
 % Table 5
 % 
@@ -821,7 +821,7 @@ Arithmetic operators are those we use for arithhmatc operations like addition, s
 % Section 5.2
 % 
 \section{Assignment Operators}
-Assignment operators are those we use for assigning values into variables like Equal to etc.
+Assignment operators\cite{Ref8} are those we use for assigning values into variables like Equal to etc.
 % 
 % Table 6
 % 
@@ -841,7 +841,7 @@ Assignment operators are those we use for assigning values into variables like E
 % Section 5.3
 % 
 \section{Unary Operators}
-Unary operators are also called single operators. I means these kinds of operators need just one varible to perform their tasks.
+Unary operators\cite{Ref8} are also called single operators. I means these kinds of operators need just one varible to perform their tasks.
 % 
 % Table 7
 % 
@@ -865,7 +865,7 @@ Unary operators are also 2 kinds. those are,
 % Subsection 5.3.1
 % 
 \subsection{Prefix}
-These kinds of operators increment/decrement their value first then perform their tasks.
+These kinds of operators\cite{Ref8} increment/decrement their value first then perform their tasks.
 % 
 % Table 8
 % 
@@ -882,7 +882,7 @@ These kinds of operators increment/decrement their value first then perform thei
 % Subsection 5.3.2
 % 
 \subsection{Postfix}
-These kinds of operators perform their task first then they increment/decrement their value.
+These kinds of operators\cite{Ref8} perform their task first then they increment/decrement their value.
 % 
 % Table 9
 %
@@ -899,7 +899,7 @@ These kinds of operators perform their task first then they increment/decrement 
 % Section 5.4
 % 
 \section{Relational Operators}
-These kinds of operators are needed to create relations between 2 variables. As like which one is greater or smaller between 2 operators etc.
+These kinds of operators\cite{Ref8} are needed to create relations between 2 variables. As like which one is greater or smaller between 2 operators etc.
 % 
 % Table 10
 %
@@ -923,7 +923,7 @@ These kinds of operators are needed to create relations between 2 variables. As 
 % Section 5.5
 % 
 \section{Bitwise Operators}
-Bitwise operators are used to performing the manipulation of individual bits of a number.
+Bitwise operators\cite{Ref8} are used to performing the manipulation of individual bits of a number.
 They can be used with any integral type (char, short, int, etc.). They are used when performing update and query operations of the Binary indexed trees.
 % 
 % Table 11
@@ -942,7 +942,7 @@ They can be used with any integral type (char, short, int, etc.). They are used 
 % Section 5.6
 % 
 \section{Logical Operators}
-Logical operators are used to check whether an expression is true or false . They are used in decision making.
+Logical operators\cite{Ref8} are used to check whether an expression is true or false . They are used in decision making.
 % 
 % Table 12
 %
@@ -959,7 +959,7 @@ Logical operators are used to check whether an expression is true or false . The
 % Section 5.7
 % 
 \section{Ternary Operators}
-The Java ternary operator lets us write an if statement on one line of code.
+The Java ternary operator\cite{Ref8} lets us write an if statement on one line of code.
 A ternary operator can either evaluate to true or false.
 It returns a specified value depending on whether the statement evaluates to true or false. We use Java if…else statements to control the flow of a program.
 % 
@@ -971,13 +971,15 @@ It returns a specified value depending on whether the statement evaluates to tru
         Operators & Syntax                    & \multicolumn{1}{c|}{Example}                                                   \\ \hline
         ? :       & x\textless{}=y?true:false & x\textless{}=y?System.out.println("X bigger") : System.out.println("Y bigger") \\ \hline
     \end{tabular}
-    \caption{Ternary Operators}
+    \begin{center}
+        \caption{Ternary Operators}
+    \end{center}
 \end{table}
 % 
 % Section 5.8
 % 
 \section{Shift Operators}
-The shift operator is used when we're performing logical bits operations, as opposed to mathematical operations.
+The shift operator\cite{Ref8} is used when we're performing logical bits operations, as opposed to mathematical operations.
 It can be used for speed, being significantly faster than division/multiplication when dealing with operands that are powers of two,
 but clarity of code is usually preferred over raw speed.
 % 
@@ -994,6 +996,52 @@ but clarity of code is usually preferred over raw speed.
     \caption{Shift Operators}
 \end{table}
 
+% 
+% Chapter 6
+%
+\chapter{Control Statements}
+To know about control statements, we have know about the statements first. So, what is an statement? Any meaningful expression is called a statement.
+There must a semicolont after each and every statement finishes.
+% 
+% Figure 11 : Control Statements
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{controlStatements.png}}
+        \caption{Control Statements\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Section 6.1
+%
+\section{Conditional Statements}
+We, the programmers need conditional statements the most to control the flow of the program. Conditional statements gives machines the ability to take decisions depends On
+the situations. Those decisions are already pre-built by us but the program will execute the right decision at the right situation. As an example, we can say that if he accepts
+all the terms and conditions then confirm the deel and give a call, otherwise just cancel the deel and shutdown. Now it depends on the customer, if he accepts or not.
+But the computer knows what he should do after the decision customer takes. These kinds of tasks also can be done by computers using those conditional
+statements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1009,6 +1057,7 @@ but clarity of code is usually preferred over raw speed.
 % BIBLIOGRAPHY
 % 
 \begin{thebibliography}{90}
+    \footnotesize
     \bibitem{Ref1} Java, \url{https://en.wikipedia.org/wiki/Java_(programming_language)}
     \bibitem{Ref2} James Gosling, \url{https://en.wikipedia.org/wiki/James_Gosling}
     \bibitem{Ref3} Java Compiler, \url{https://www.jdoodle.com/online-java-compiler/}
@@ -1016,7 +1065,8 @@ but clarity of code is usually preferred over raw speed.
     \bibitem{Ref5} Format Specifier,  \footnotesize{\url{https://www.geeksforgeeks.org/format-specifiers-in-java/}}
     \bibitem{Ref6} DataType, \url{https://www.javatpoint.com/java-data-types}
     \bibitem{Ref7} User Input, \url{https://www.w3schools.com/java/java_user_input.asp}
-    \bibitem{Ref8} User Input, \url{https://www.qafox.com/java-for-testers-different-types-of-operators-in-java/}
+    \bibitem{Ref8} Operators, \url{https://www.qafox.com/java-for-testers-different-types-of-operators-in-java/}
+    \bibitem{Ref9} Control Statements, \url{http://www.testingtools.co/java/11-keywords-to-learn-loops-and-conditional-statements-in-java}
 \end{thebibliography}
 
 
@@ -1027,7 +1077,7 @@ but clarity of code is usually preferred over raw speed.
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
