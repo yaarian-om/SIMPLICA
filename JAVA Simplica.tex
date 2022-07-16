@@ -11,6 +11,7 @@
 
 \definecolor{smokeWhite}{HTML}{F5F5F5}
 \begin{document}
+
 \begin{titlepage}
     \pagecolor{black}
     \color{white}
@@ -1019,20 +1020,311 @@ We, the programmers need conditional statements the most to control the flow of 
 the situations. Those decisions are already pre-built by us but the program will execute the right decision at the right situation. As an example, we can say that if he accepts
 all the terms and conditions then confirm the deel and give a call, otherwise just cancel the deel and shutdown. Now it depends on the customer, if he accepts or not.
 But the computer knows what he should do after the decision customer takes. These kinds of tasks also can be done by computers using those conditional
-statements.
+statements. Conditional statements have 3 sub-parts. Those are,
+\begin{itemize}
+    \item if-else
+    \item if-else if-else
+    \item switch
+\end{itemize}
+% 
+% Subsection 6.1.1
+% 
+\subsection{If-Else}
+In this statement there will be atleast one if(condition)\{\}. And atmost one else\{\}. It will be perfectly alright if we do not use else here.
+% 
+% Subsubsection 6.1.1.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{if(condition)\{statements;\}\\else\{statements;\}}
+    }
+\end{center}
+
+\newpage
+
+% 
+% Subsubsection 6.1.1.2
+% 
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
+
+        public class Test{
+            public static void main(String args[]){
+                Scanner input = new Scanner(System.in);
+                int x, y;
+                System.out.print("Enter an integer : ");
+                x = input.nextInt();
+                System.out.print("Enter another integer : ");
+                y = input.nextInt();
+                if (y != x){
+                    if (x < y){
+                        System.out.println(y + " is Greater");
+                    }else{
+                        System.out.println(x + " is Greater");
+                    }
+                } // We didn't use else here. But it's Working
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 12 : If-Else Condition
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{ifElse.png}}
+        \caption{If-Else Condition}
+    \end{center}
+\end{figure}
+% 
+% Subsection 6.1.2
+% 
+\subsection{If, Else If, Else}
+In this statement there will be atleast one if(condition)\{\}. And atmost one else\{\}. There can be multiple else if(condition)\{\}. It will be perfectly alright if we do not use else here.
+% 
+% Subsubsection 6.1.2.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{if(condition)\{statements;\}\\else if(condition)\{statements;\}\\else if(condition)\{statements;\}\\else\{statements;\}}
+    }
+\end{center}
+% 
+% Subsubsection 6.1.2.2
+% 
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
+
+        public class Test{
+            public static void main(String args[]){
+                Scanner input = new Scanner(System.in);
+                int x, y;
+                System.out.print("Enter an integer : ");
+                x = input.nextInt();
+                System.out.print("Enter another integer : ");
+                y = input.nextInt();
+                if(x < y){
+                    System.out.println(y + " is Greater");
+                }else if(x > y){
+                    System.out.println(x + " is Greater");
+                }else{
+                    // else works when any option didn't matched.
+                    System.out.println("Both are equal as " + x);
+                }
+
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 12 : If, Else If, Else Condition
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{elseif.png}}
+        \caption{If-Else Condition}
+    \end{center}
+\end{figure}
+% 
+% Subsection 3.1.3
+% 
+\subsection{Switch}
+Switch is a conditional statement which is used to take decision from multiple options. It is kind of a list contains multiple decisions based on multiple situations.
+As an example, we all have seen the vending machine. There are lots of cokes placed on the shelves. We have to put money and press the button of the coke we want. Then the
+coke from a specific shelf comes down automatically. Switch case is kind of same. User have to push a button or select from multiple choice. The program will perform the task
+assigned for that specific option from those multiple choices. There are 2 types of inputs for switches. Those are,
+\begin{itemize}
+    \item Single Digit Numbers (0 $\to$ 9)
+    \item Alphabets (A-Z) or (a-z)
+\end{itemize}
+% 
+% Figure 13 : Vending Machine
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{vendingMachine.jpeg}}
+        \caption{Vending Machine\cite{Ref10}}
+    \end{center}
+\end{figure}
+% 
+% Subsubsection 6.1.3.1
+%
+\subsubsection{Syntax}
+\begin{center}
+    \begin{verbatim}
+        // If input type is numaric
+        switch(integer_variable){
+            case 1:{
+                statements;
+                statements;
+                break;
+            }
+            case 2:{
+                statements;
+                statements;
+                break; // we use breaks so that after executing one case, 
+                      //the switch stops and don,t go to another one
+            }
+            default:{
+                statements;
+                statements;
+                // Default works when any option didn't matched.
+                break;
+            }
+        }
 
 
+        // If input type is character
+        switch(character_variable){
+            case 'a':{
+                statements;
+                statements;
+                break;
+            }
+            case 'B':{
+                statements;
+                statements;
+                break;
+            }
+            default:{
+                statements;
+                statements;
+                break;
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Subsubsection 6.1.3.2
+%
+\subsection{Example}
+\begin{center}
+    \footnotesize{
+        \begin{verbatim}
+import java.util.Scanner;
 
+public class Test{
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        int x, numberofCokes = 0, numberofChips = 0;
+        char y = 'a';
+        double price = 0;
+        System.out.println("-------------------- COKES ------------------------");
+        System.out.println("              Press 1 for COCACOLA                 |");
+        System.out.println("              Press 2 for PEPSI                    |");
+        System.out.println("---------------------------------------------------");
+        System.out.print("             Enter your Choice >> ");
+        x = input.nextInt();
+        // If input type is numaric
+        switch(x){
+            case 1:{
+                System.out.println("COCACOLA SELECTED");
+                System.out.println("Price is = 25/-");
+                numberofCokes++;
+                price = price + 25 * numberofCokes;
 
+                break;
+            }
+            case 2:{
+                System.out.println("PEPSI SELECTED");
+                System.out.println("Price is = 15/-");
+                numberofCokes++;
+                price = price + 15 * numberofCokes;
+                break;
+            }
+            default:{
+                System.out.println("\nPLEASE ENTER A VALID INPUT");
+                break;
+            }
+        }
 
+        System.out.println("-------------------- CHIPS ------------------------");
+        System.out.println("              Press a for KURKURE                  |");
+        System.out.println("              Press b for LAYS                     |");
+        System.out.println("---------------------------------------------------");
+        System.out.print("              Enter your Choice >> ");
+        y = input.next().charAt(0);
+        // If input type is character
+        switch(y){
+            case 'a':{
+                System.out.println("KURKURE SELECTED");
+                System.out.println("Price is = 25/-");
+                numberofChips++;
+                price = price + 25 * numberofChips;
+                break;
+            }
+            case 'b':{
+                System.out.println("KURKURE SELECTED");
+                System.out.println("Price is = 20/-");
+                numberofChips++;
+                price = price + 20 * numberofChips;
+                break;
+            }
+            default:{
+                System.out.println("\nPLEASE ENTER A VALID INPUT");
+                break;
+            }
+        }
 
+        System.out.println("Your Bill is = " + price + " /- TK");
 
+    }
+}
+\end{verbatim}
+    }
+\end{center}
 
+% 
+% Figure 14 : Switch
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{switch.png}}
+        \caption{Switch\cite{Ref3}}
+    \end{center}
+\end{figure}
 
+\newpage
 
-
-
-
+% 
+% Section 6.2
+% 
+\section{Looping Statements}
+Looping means iterations. That means doing any specific task again \& again or multiple times. Sometimes we have to do many tasks again and again to complete it. In these situations
+we use loops to finish it. because it's impossible to write same code 100 of time if we have to repeat it 100 times. So, we creates loops and tell it to run and do same task repeatedly 100 times.
+sometimes we need to repeat same task till a specific environment occurs. In that case we can also use conditions in the loops. There are 3 kinds of loops in JAVA. Those are,
+\begin{itemize}
+    \item For Loops
+    \item While Loops
+    \item Do-While Loops
+\end{itemize}
+% 
+% Subsection 6.2.1
+% 
+\subsection{For Loops}
+For Loops are also called incremental loops. We use this loop, when we know exactly how many times we want to repeat the task.
+% 
+% Susubbsection 6.2.1.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \begin{verbatim}
+        for(starting_point;ending_Point;Increment/Decrement){
+            //Statements;
+            //Statements;
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Susubbsection 6.2.1.2
+% 
+\subsubsection{Example}
 
 
 
@@ -1067,6 +1359,7 @@ statements.
     \bibitem{Ref7} User Input, \url{https://www.w3schools.com/java/java_user_input.asp}
     \bibitem{Ref8} Operators, \url{https://www.qafox.com/java-for-testers-different-types-of-operators-in-java/}
     \bibitem{Ref9} Control Statements, \url{http://www.testingtools.co/java/11-keywords-to-learn-loops-and-conditional-statements-in-java}
+    \bibitem{Ref10} Vending Machine, \url{http://benchmarkreporter.com/buying-vs-renting-a-vending-machine-which-option-is-better/}
 \end{thebibliography}
 
 
@@ -1079,6 +1372,10 @@ statements.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 \end{document}
 
 % \index{Index B}
