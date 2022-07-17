@@ -6,7 +6,8 @@
 \usepackage{url,hyperref}               %  For Inserting Index in the document
 \usepackage[xindy]{imakeidx}            %  For Inserting Index in Alphabetical order
 \usepackage{float}                      %  For Preventing Table Repositioning
-\usepackage{layout}
+\usepackage{float}                      %  For Preventing Table Repositioning
+\usepackage{geometry}
 
 
 \makeindex                              %  For Inserting Index in the document
@@ -105,7 +106,7 @@
 \newpage
 \listoftables
 \newpage
-
+\setlength{\evensidemargin}{1.44614pt}           %  Margin Setting
 % 
 % Part 1
 % 
@@ -1477,7 +1478,8 @@ Rather, It is also used in the loops too. Break basically ends the most inner lo
 it immediately
 
 
-
+\the \evensidemargin\\
+\the \oddsidemargin
 
 
 
