@@ -1,11 +1,12 @@
 \documentclass[openany]{book}  % Openany removes the blank pages between 2 chapters
 \usepackage{color}
 \usepackage{xcolor}
-\usepackage{graphicx}                   %  For Inserting List of Figures
+\usepackage{graphicx}   
+\usepackage{graphics}                %  For Inserting List of Figures
 \usepackage{index}                      %  For Inserting Index in the document
 \usepackage{url,hyperref}               %  For Inserting Index in the document
 \usepackage[xindy]{imakeidx}            %  For Inserting Index in Alphabetical order
-\usepackage{float}                      %  For Preventing Table Repositioning
+%\usepackage{float}                      %  For Preventing Table Repositioning
 \usepackage{float}                      %  For Preventing Table Repositioning
 \usepackage{geometry}
 
@@ -1366,7 +1367,7 @@ For Loops are also called incremental loops. We use this loop, when we know exac
 \subsection{While Loops}
 While loops are also called conditional loops. Because we use conditions in this loop. As an exaple, we can do a repeated task until the user put a specific value.
 % 
-% Susubbsection 6.2.2.1
+% Subsubbsection 6.2.2.1
 % 
 \subsubsection{Syntax}
 \begin{center}
@@ -1380,7 +1381,7 @@ While loops are also called conditional loops. Because we use conditions in this
     \end{verbatim}
 \end{center}
 % 
-% Susubbsection 6.2.2.2
+% Subsubbsection 6.2.2.2
 % 
 \subsubsection{Example}
 \begin{center}
@@ -1466,6 +1467,55 @@ though the condition is wrong.
     \end{center}
 \end{figure}
 % 
+% Subsection 6.2.4
+% 
+
+\newpage
+
+\subsection{For Each Loops}
+For Each loop is called enhanced for loop. It is basically used
+for arrays. 
+% 
+% Susubbsection 6.2.4.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \begin{verbatim}
+        for(dataType : variableName){
+            \\ Statements;
+            \\ Statements;
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Susubbsection 6.2.4.1
+% 
+\subsubsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
+        public class Test {
+            public static void main(String args[]) {
+                int [] numbers = {5,6,7,8,9};
+                for(int x : numbers){
+                    // More Statements
+                    System.out.println(x);
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 18 : For Each Loop
+%
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{foreach.png}}
+        \caption{For Each Loop}
+    \end{center}
+\end{figure}
+
+% 
 % Section 6.3
 % 
 \section{Jump Statements}
@@ -1475,11 +1525,187 @@ though the condition is wrong.
 \subsection{Break}
 Break is mostly used in switches.
 Rather, It is also used in the loops too. Break basically ends the most inner loop a switch case. That means if a java compiler reads a break statement
-it immediately
+it immediately the most inner loop or case.
+% 
+% Subsubsection 6.3.1.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{break;}
+    }
+\end{center}
+% 
+% Subsubsection 6.3.1.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter the number where you want to break >> ");
+                int x = input.nextInt();
+                int i = 0;
+                while(true){
+                    if(x==i){
+                        break;
+                    }else{
+                        System.out.println("Current value = "+i);
+                    }
+                    i++;
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 19 : Break
+%
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{break.png}}
+        \caption{Break}
+    \end{center}
+\end{figure}
+% 
+% Subsection 6.3.2
+% 
+\subsection{Continue}
+Continue keyword means kind of skip. That means if a java compiler
+founds that keyword in any loop then it skips that iteration(executing statements)
+\& goes for the next iteration.
+% 
+% Subsubsection 6.3.2.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{continue;}
+    }
+\end{center}
+% 
+% Subsubsection 6.3.2.2
+% 
+\subsubsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter the number which number you want to Skip >> ");
+                int x = input.nextInt();
+                int i = 1;
+                while(i<20){
+                    if(x==i){
+                        i++;
+                        continue;
+                    }else{
+                        System.out.println("Current value = "+i);
+                    }
+                    i++;
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 20 : Continue
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{continue.png}}
+        \caption{Continue}
+    \end{center}
+\end{figure}
 
 
-\the \evensidemargin\\
-\the \oddsidemargin
+% 
+% Chapter 7
+% 
+\chapter{Array}
+Array means declaration of bunch of variables of same type at a time.
+It means if we want to declare 50 variables for 50 data, and we don't
+use array, then we have to declare them one by one manually. But if we 
+use array then we just declare once with data type and we'll tell
+it to declare 50 variables then it'll declare 50 variables automatically
+it's own. There are 2 kinds of arrays. Those are,
+\begin{itemize}
+    \item One Dimensional
+    \item Two Dimensional
+\end{itemize}
+% 
+% Section 7.1
+% 
+\section{One Dimensional Array}
+One Dimensional array has just one row of variables in a matrix.
+Or, we can say that one dimensional array is just a simple array
+with defined number of variables. And how many variables it'll
+create, that defined number depend on us.
+% 
+% Section 7.1.1
+%
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{dataType [] variableName = new dataType[Size]; // Declaration only \\
+        dataType [] variableName = \{\} //Declaration and Initialization }
+    }
+\end{center}
+% 
+% Section 7.1.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Scanner;
+        public class Test {
+            public static void main(String args[]) {
+                int [] numbers = {5,6,7,8,9};
+                for(int i=0;i<numbers.length; i++){
+                    System.out.println(numbers[i]);
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 21 : One Dimensional Array
+% 
+\begin{figure*}[h!t]
+    \begin{center}
+        \fbox{\includegraphics[width=8cm]{1D_Array.png}}
+        \caption{One Dimensional Array}
+    \end{center}
+\end{figure*}
+% 
+% Section 7.1
+% 
+\section{Two Dimensional Array}
+Two dimensional arrays are like matrix table. But each and every 
+element or position is a variable.
+% 
+% Subsection 7.1.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{dataType[][] variableName = new dataType[][];}
+    }
+\end{center}
+
+% 
+% Subsection 7.1.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        ...
+    \end{verbatim}
+\end{center}
+
 
 
 
@@ -1589,3 +1815,8 @@ it immediately
         ...
     \end{verbatim}
 \end{center}
+
+
+
+\the \evensidemargin\\
+\the \oddsidemargin
