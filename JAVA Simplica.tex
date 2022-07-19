@@ -1631,7 +1631,83 @@ It means if we want to declare 50 variables for 50 data, and we don't
 use array, then we have to declare them one by one manually. But if we 
 use array then we just declare once with data type and we'll tell
 it to declare 50 variables then it'll declare 50 variables automatically
-it's own. There are 2 kinds of arrays. Those are,
+it's own. \linebreak
+To create an array we need new keyword. Sometimes the size of array 
+can be pre defined sometimes the user have the choice to declare the
+size of an array. These are called dynamic memory allocation. This
+type of animation is also called non-primitives. \linebreak
+To see the length of the array, we have to use .length keyword.
+% 
+% Subsubsection 7.0.0.1
+%  
+\subsubsection{Syntax of Array Length}
+\begin{center}
+    \tt{
+        \textit{int variableName = arrayName.length;}
+    }
+\end{center}
+% 
+% Subsubsection 7.0.0.2
+% 
+\subsubsection{Example of Array Length}
+\begin{center}
+    \begin{verbatim}
+        int size = numbers.length;
+    \end{verbatim}
+\end{center}
+% 
+% Subsubsection 7.0.0.3
+% 
+\subsubsection{Syntax of Sorting an Array}
+\begin{center}
+    \tt{
+        \textit{Arrays.sort(arrayName);}
+    }
+\end{center}
+% 
+% Subsubsection 7.0.0.4
+% 
+\subsubsection{Example of Sorting an Array}
+\begin{center}
+    \begin{verbatim}
+        import java.util.Arrays;
+        import java.util.Scanner;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+        
+                System.out.print("Enter the row Number : ");
+                int n = input.nextInt();
+                int[] arr = new int[n];
+                
+                for(int i=0;i<n;i++){
+                    System.out.print("Number["+(i+1)+"] = ");
+                    arr[i] = input.nextInt();
+                }
+                Arrays.sort(arr); // Code For Sorting a array Low to High
+                System.out.println("Sorting Done !!");
+        
+                for(int i=0;i<n;i++){
+                    System.out.println("Number["+(i+1)+"] = "+arr[i]);
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 21 : Sorting in Array
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{arraysort.png}}
+        \caption{Array Sorting\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Subsubsection 7.0.0.5
+% 
+\subsubsection{Classification of Arrays}
+There are 2 kinds of arrays. Those are,
 \begin{itemize}
     \item One Dimensional
     \item Two Dimensional
@@ -1650,7 +1726,7 @@ create, that defined number depend on us.
 \subsection{Syntax}
 \begin{center}
     \tt{
-        \textit{dataType [] variableName = new dataType[Size]; // Declaration only \\
+        \textit{dataType [] arrayName = new dataType[Size]; // Declaration only \\
         dataType [] variableName = \{\} //Declaration and Initialization }
     }
 \end{center}
@@ -1672,7 +1748,7 @@ create, that defined number depend on us.
     \end{verbatim}
 \end{center}
 % 
-% Figure 21 : One Dimensional Array
+% Figure 22 : One Dimensional Array
 % 
 \begin{figure*}[h!t]
     \begin{center}
@@ -1681,30 +1757,237 @@ create, that defined number depend on us.
     \end{center}
 \end{figure*}
 % 
-% Section 7.1
+% Section 7.2
 % 
 \section{Two Dimensional Array}
 Two dimensional arrays are like matrix table. But each and every 
 element or position is a variable.
 % 
-% Subsection 7.1.1
+% Subsection 7.2.1
 % 
 \subsection{Syntax}
 \begin{center}
     \tt{
-        \textit{dataType[][] variableName = new dataType[][];}
+        \textit{dataType[][] arrayName = new dataType[][];}
     }
 \end{center}
 
 % 
-% Subsection 7.1.2
+% Subsection 7.2.2
 %
 \subsection{Example}
 \begin{center}
     \begin{verbatim}
-        ...
+        import java.util.Scanner;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter the row Number : ");
+                int m = input.nextInt();
+                System.out.print("Enter the Column Number : ");
+                int n = input.nextInt();
+                System.out.println("Enter Values : ");
+                int [][] numbers = new int[m][n];
+                for(int row=0;row<m;row++){
+                    for(int col=0;col<n;col++){
+                        System.out.print("Number["+(row+1)+"]["+(col+1)+"] = ");
+                        numbers[row][col] = input.nextInt();
+                    }
+                }
+
+                System.out.println("\n\nInsterd Values are =====>>");
+                for(int row=0;row<m;row++){
+                    for(int col=0;col<n;col++){
+                        System.out.println("Number["+(row+1)+"]["+(col+1)+"] = "+numbers[row][col]);
+                    }
+                }
+            }
+        }
     \end{verbatim}
 \end{center}
+% 
+% Figure 23 : Temp
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{2D array.png}}
+        \caption{temp\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Section 7.3
+% 
+\section{ArrayList}
+In short, arrayList is a dynamic array, where you can get as 
+much as variables but no overflow or null/underflow. As an example, suppose we need 5
+variables to store the marks of 5 students. but suddenly 3 students appears
+now if we use normal array, then the storage is fixed with length 5 which
+means we have start from the beginning again.But, if we use the 
+arrayList, then we can add those 3 students also without writing the 
+code/software again. That's why it is also called the better version of arrays.\linebreak
+To add values in arrayList we need to use \textit{arrayListName.add(value);}
+% 
+% figure : 24
+% 
+\begin{table}[htbp]
+    \begin{tabular}{|l|l|}
+    \hline
+    Array             & ArrayList              \\ \hline
+    Not Resizable     & Resizable              \\ \hline
+    For/For Each Loop & For Each Loop/Iterator \\ \hline
+    Fast              & Slow                   \\ \hline
+    arrayName.length; & arrayName.size();      \\ \hline
+    Static            & Dynamic                \\ \hline
+    \end{tabular}
+    \centering
+    \caption{Array VS ArrayList}
+\end{table}
+% 
+% Subsection 7.3.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{ArrayList<dataType>variableName = new ArrayList();}
+    }
+\end{center}
+% 
+% Subsection 7.3.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.ArrayList;
+        import java.util.Scanner;
+
+        import javax.print.attribute.standard.NumberUp;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                ArrayList<Integer>number = new ArrayList<>();
+                System.out.println("Size = "+number.size());
+                number.add(10);
+                number.add(20);
+                number.add(30);
+                number.add(40);
+                System.out.println(number); // Horizontal Print
+                //using for each loop
+                for(int x: number){
+                    System.out.println(x);
+                }
+                System.out.println("Size = "+number.size());
+                // Removing Elements
+                number.remove(2);
+                System.out.println("After Removing, Number = "+number);
+                // REmoving all elements
+                number.removeAll(number);
+                System.out.println("After Removing All, Number = "+number);
+                // Removing all Elements
+                number.clear();
+                System.out.println("After Removing, Number = "+number);
+                boolean b = number.isEmpty();// Return true if empty
+                System.out.println("Empty? = "+b);
+                // Contaisn checks if the element is present or not
+                boolean b1 = number.contains(30);
+                System.out.println("Element Present ? = "+b1);
+                // Index of shows index of any value, if not found then gives -1
+                int i = number.indexOf(40);
+                System.out.println("Index of the element = "+i);                
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% figure : 25 : 
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{arrayList.png}}
+        \caption{ArrayList\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Subsection 7.3.3
+% 
+\subsection{Set Methods}
+.set methods is used to replace any existing value present in any index of 
+arrayList. That means if we want to change the value of 5th index then
+the arrayList should have the values from index 0 $\to$ 5. 
+% 
+% Subsubsection 7.3.3.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{arrayListName.set(index,value);}
+    }
+\end{center}
+% 
+% Subsection 7.3.4
+% 
+\subsection{Get Methods}
+.get methods is used to print any value present in any index of 
+arrayList.
+% 
+% Subsubsection 7.3.3.1
+% 
+\subsubsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{dataType variableName = arrayListName.get(indexNumber);}
+    }
+\end{center}
+% 
+% Subsubsection 7.3.3.2
+%
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.ArrayList;
+        import java.util.Scanner;
+
+        import javax.print.attribute.standard.NumberUp;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                ArrayList<Integer>number = new ArrayList<>();
+                System.out.println("Size = "+number.size());
+                number.add(10);
+                number.add(20);
+                number.add(30);
+                number.add(40);
+                System.out.println(number); // Horizontal Print
+                //using for each loop
+                for(int x: number){
+                    System.out.println(x);
+                }
+                System.out.println("Size = "+number.size());
+                // Removing Elements
+                number.set(3,50);
+                System.out.println("After Removing, Number = "+number);
+                // REmoving all elements
+                int x = number.get(3);
+                System.out.println("Getting Value is = "+x); 
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 26 : ArrayList Set Get
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{arrayListSETGET.png}}
+        \caption{ArrayList Set Get\cite{Ref3}}
+    \end{center}
+\end{figure}
+
+
+
+
+
+
+
 
 
 
