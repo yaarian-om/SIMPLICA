@@ -2001,6 +2001,9 @@ arrayList.
     \centering
     \caption{ArrayList Methods}
 \end{table}
+
+\newpage
+
 % 
 % Subsection 7.3.4
 % 
@@ -2009,24 +2012,180 @@ arrayList.
 % Subsubsection 7.3.4.1
 % 
 \subsubsection{Syntax}
-\subsection{Syntax}
 \begin{center}
     \tt{
         \textit{Collections.sort(arrayListName);//Ascending\\Collections.sort(arrayListName,Collections.reverseOrder());//Reverse\\int variableName = ArrayListName.get(0);//Min\\int variableName = ArrayListName.size()-1);// Max}
     }
 \end{center}
+% 
+% Subsubsection 7.3.4.1
+% 
+\subsubsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.ArrayList;
+        import java.util.Collection;
+        import java.util.Collections;
+        import java.util.Scanner;
 
+        import javax.print.attribute.standard.NumberUp;
+        public class Test {
+            public static void main(String args[]) {
+                Scanner input = new Scanner(System.in);
+                ArrayList<Integer>numbers = new ArrayList<>(); // Declaring ArrayList
+                // Adding values to numbers
+                numbers.add(50);
+                numbers.add(30);
+                numbers.add(10);
+                System.out.println(numbers); 
+                numbers.add(3,40); // Adding in a specific position
+                System.out.println(numbers); 
+                System.out.println("Size = "+numbers.size());
+                // Ascending Sorting
+                Collections.sort(numbers);
+                System.out.println("After Ascending sorting = "+numbers);
+                // Gettting Lowest value of ArrayList
+                int min = numbers.get(0);
+                System.out.println("Min Value = "+min);
+                // Gettting Biggest value of ArrayList
+                int max = numbers.get(numbers.size()-1);
+                System.out.println("Max Value = "+max);
+                // Descendind Sorting
+                Collections.sort(numbers,Collections.reverseOrder());
+                System.out.println("After Descending sorting = "+numbers);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 27 : Temp
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{Sorting ArrayList.png}}
+        \caption{String Methods\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Chapter 8
+% 
+\chapter{String}
+Sequence of characters are together called strings. In simple words,
+words and sentences are called strings.
+% 
+% Section : 8.1 
+% 
+\section{String Methods}
+% 
+% Subsection : 8.1.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{stringVariableName.methodName()}
+    }
+\end{center}
+% 
+% Subsection : 8.1.2
+% 
+\subsection{String Basic Methods}
+% 
+% Table 17
+% 
+\begin{table}[htbp]
+    \begin{tabular}{ll}
+    Method             & Description                                                                                           \\
+    length()           & shows the string length                                                                                   \\
+    equals()           & checks, 2 strings are same or not                                                                         \\
+    equalsIgnoreCase() & \begin{tabular}[c]{@{}l@{}}matches the characters, doesn't matter\\ if it's capital or small\end{tabular} \\
+    contains()         & checks if the word is present in the given string or not                                                  \\
+    isEmpty()          & checks if the string is Empty {[}("") or null{]} or not                                                   \\
+    concat()           & to add to strings together and make one string                                                            \\
+    toUpperCase()      & It turns all the characters into upper case characters                                                    \\
+    toLowerCase()      & It turns all the characters into lower case characters                                                    \\
+    startsWith()       & It checks if the string started with given character or word                                              \\
+    endsWith()         & It checks if the string ended with given character or word                                               
+    \end{tabular}
+    \centering
+    \caption{String Basic Methods}
+\end{table}
 
+\newpage
 
+% 
+% Subsection : 8.1.3
+% 
+\subsection{String Special Methods}
+% 
+% Table 18
+% 
+\begin{table}[htbp]
+    \begin{tabular}{ll}
+    Method        & TaskDescription                                                                                                                                             \\
+    trim()        & Removes the previous after spaces in of a string                                                                                                            \\
+    charAt()      & It takes an integer value as index and return the thing holding in that index variable                                                                      \\
+    charPointAt() & Shows ASCII value based on input parameter                                                                                                                  \\
+    indexOf       & Shows the index value of any character/word                                                                                                                 \\
+    lastIndexOf() & \begin{tabular}[c]{@{}l@{}}If there is same character or word in a string then shows the index of the\\ last occurrence of that word/character\end{tabular} \\
+    replace()     & It replaces all words that matches with the specific given word and puts new word                                                                           \\
+    split()       & It breaks when it founds the specific character given and makes it as a data cropping                                                                      
+    \end{tabular}
+    \centering
+    \caption{String Special Methods}
+\end{table}
+% 
+% Subsection : 8.1.4
+% 
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        import java.util.ArrayList;
+        import java.util.Collection;
+        import java.util.Collections;
+        import java.util.Scanner;
 
+        import javax.print.attribute.standard.NumberUp;
+        public class Test {
+            public static void main(String args[]) {
+                String message2 = "We_are_Learning";
+                String message = "We_Are_Learning";
+                System.out.println("Length = "+message.length());
+                System.out.println("Equals = "+message.equals(message2));
+                System.out.println("Equals Ingnoring Case = "+message.equalsIgnoreCase(message2));
+                System.out.println("Contains = "+message.contains("Learning"));
+                System.out.println("is Empty = "+message.isEmpty());
+                System.out.println("Concat = "+message.concat("_Java"));
+                System.out.println("To Upper Case = "+message.toUpperCase());
+                System.out.println("To Lower Case = "+message.toLowerCase());
+                System.out.println("Start With = "+message.startsWith("We"));
+                System.out.println("Ends With = "+message.endsWith("Learning"));
 
-
-
-
-
-
-
-
+                System.out.println("Trim = "+message.trim());
+                System.out.println("Char At = "+message.charAt(5));
+                System.out.println("Index Of = "+message.indexOf("Are"));
+                System.out.println("Last index of = "+message.lastIndexOf("e"));
+                System.out.println("Replace A -> a = "+message.replace('A','a'));
+                String[] words = message.split("_");
+                for (String string : words) {
+                    System.out.println(string);
+                }
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 28 : Temp
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{String Methods.png}}
+        \caption{String Methods\cite{Ref3}}
+    \end{center}
+\end{figure}
+% 
+% Section 8.2
+% 
+\secttion{}
 
 
 
