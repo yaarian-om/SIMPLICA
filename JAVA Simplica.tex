@@ -2174,7 +2174,7 @@ words and sentences are called strings.
     \end{verbatim}
 \end{center}
 % 
-% Figure 28 : Temp
+% Figure 28 : String Methods
 % 
 \begin{figure}[htbp]
     \begin{center}
@@ -2185,7 +2185,146 @@ words and sentences are called strings.
 % 
 % Section 8.2
 % 
-% \secttion{}
+\section{String Buffer}
+The only difference between string and string Buffer is ,
+for string we can not change the string and store at the same 
+variable. Because we just make association by just declaring string variables.
+But if we initialize string object that means this is only operated inside 
+that class no where else so that's why we can change the string and store 
+in that same variable.
+% 
+% table : 19
+% 
+\begin{table}[htbp]
+    \begin{tabular}{ll}
+    Method               & TaskDescription                                                                                                           \\
+    append()             & Add a string with the existing string                                                                                     \\
+    reverse()            & \begin{tabular}[c]{@{}l@{}}It returns that same string but printed backwardly \\ as like (learn =$>$  nrael) \\ Also called Palindrome\end{tabular} \\
+    delete(start,end)    & \begin{tabular}[c]{@{}l@{}}It deletes a specific portion of a string based on the\\ indexes\end{tabular}                  \\
+    setLength(parameter) & It show the strings from starting index 0 to parameter(integer)                                                          
+    \end{tabular}
+    \centering
+    \caption{String Buffer Methods}
+\end{table}
+% 
+% Subsection : 8.2.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{StringBuffer variableName = new StringBuffer(stringVariableName);\\variableName.methodName();}
+    }
+\end{center}
+% 
+% Subsection : 8.2.2
+% 
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        public class Test {
+            public static void main(String args[]) {
+                String s1 = "boys";
+                StringBuffer sb = new StringBuffer(s1);
+                System.out.println(sb);
+                sb.append(" are learning");
+                sb.append(25);
+                System.out.println(sb);
+                sb.delete(0, 5);
+                System.out.println(sb);
+                sb.replace(0, 3, "We");
+                System.out.println(sb);
+                sb.reverse();
+                System.out.println(sb);
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 29 : String Buffer Methods
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{StringBuffer.png}}
+        \caption{String Buffer}
+    \end{center}
+\end{figure}
+% 
+% Section 8.3
+% 
+\section{String Builder}
+We can store string in 3 ways, those are,
+\begin{itemize}
+    \item String
+    \item StringBuffer
+    \item StringBuilder
+\end{itemize}
+Of them, StringBuffer and StringBuilder are similar.
+% 
+% Subsection 8.3.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{StringBuilder variableName = new StringBuider(stringVariableName);\\variableName.methodName();}
+    }
+\end{center}
+% 
+% Subsection 8.3.2
+% 
+\begin{center}
+    \begin{verbatim}
+        public class Test {
+            public static void main(String args[]) {
+            String s1 = "boys";
+            StringBuilder message = new StringBuilder("We");
+            System.out.println("String = "+message);
+            message.append(" are learning");
+            System.out.println("String updated = "+message);
+            message.delete(2, 6);
+            System.out.println(message);
+        }
+    }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 30 : String Builder
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{StringBuilder.png}}
+        \caption{String Builder}
+    \end{center}
+\end{figure}
+% 
+% Chapter 9
+% 
+\chapter{Wrapper Class}
+We know, int, charAt, double, these are primitive dataTypes. So, if 
+we want to convent these into a object or we want to convert an object Introduction
+primitive dataTypes, then we'll need wrapper classes.
+% 
+% Table : 20
+% 
+\begin{table}[htbp]
+    \begin{tabular}{cc}
+    Primitive & Wrapper Class \\
+    boolean   & Boolean       \\
+    char      & Character     \\
+    byte      & Byte          \\
+    short     & Short         \\
+    int       & Integer       \\
+    long      & Long          \\
+    float     & Float         \\
+    double    & Double       
+    \end{tabular}
+    \centering
+    \caption{Wrapper Classes}
+\end{table}
+
+
+
+
+
 
 
 
