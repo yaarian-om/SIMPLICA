@@ -2356,8 +2356,8 @@ AutoBoxing means to convert an object to a primitive dataType.
         \vskip 0.5cm
         \raggedright{Un-Boxing Process-2 : \\}
         \textit{
-            wrapperClassType wrapperVariableName = new wrapperClassType(value);\\
-            dataType variableName = wrapperVariableName;\\
+            wrapperClassType wrapperVariableName = new wrapperClassType(value);
+            dataType variableName = wrapperVariableName;
         }
     }
 \end{center}
@@ -2365,243 +2365,16 @@ AutoBoxing means to convert an object to a primitive dataType.
 % Subsubsection 9.0.0.4
 % 
 \subsubsection{Example}
-\begin{center}
-    \begin{verbatim}
-        public class Test {
-            public static void main(String args[]) {
-                int x = 30;
-                Integer z = x; // Auto-Boxing
-                System.out.println("Z = "+z);
-                Double d = new Double(10.25);
-                System.out.println("d = "+d);
-                double e = d; // UnBoxing
-                System.out.println("e = "+e);
-            }
-        }
-    \end{verbatim}
-\end{center}
-% 
-% Figure 31 : AutoBoxing Unboxing
-% 
-\begin{figure}[htbp]
-    \begin{center}
-        \fbox{\includegraphics*[width=8cm]{BoxingUnBoxing.png}}
-        \caption{AutoBoxing Unboxing}
-    \end{center}
-\end{figure}
-% 
-% Section 9.1
-% 
-\section{Conversation between String \& Primitive}
-% 
-% Subsection 9.1.1
-% 
-\subsection{Example}
-\begin{center}
-    \begin{verbatim}
-        public class Test {
-            public static void main(String args[]) {
-            int i = 30;
-            String s1 = Integer.toString(i); // int --> String
-            System.out.println("S1 = "+s1);
 
-            double d = 30.45;
-            String s2 = Double.toString(d); // double --> String
-            System.out.println("S2 = "+s2);
-            
-            String s3 = "32";
-            int i2 = Integer.parseInt(s3); // String --> int
-            System.out.println("i2 = "+i2);
-            int ix = Integer.valueOf("100");
-            System.out.println("ix = "+i);
-        }
-    }
-    \end{verbatim}
-\end{center}
-% 
-% Figure 32 : String & Primitive
-% 
-\begin{figure}[htbp]
-    \begin{center}
-        \fbox{\includegraphics*[width=8cm]{StringAndPrimitive.png}}
-        \caption{String \& Primitive}
-    \end{center}
-\end{figure}
-% ************* Code********
-\begin{center}
-    \begin{verbatim}
-        public class Test {
-            public static void main(String args[]) {
-            int decimal = 15;
-            String binary = Integer.toBinaryString(decimal); // decimal --> Binary
-            System.out.println("Binary = "+binary);
 
-            String octal = Integer.toOctalString(decimal); // decimal --> Octal
-            System.out.println("Octal = "+octal);
 
-            String hexa = Integer.toOctalString(decimal); // decimal --> Octal
-            System.out.println("Hexa = "+hexa);
-        }
-    }
-    \end{verbatim}
-\end{center}
-% 
-% Figure 33 : Decimal --> Binary/Octal/Hexa-Decimal
-% 
-\begin{figure}[htbp]
-    \begin{center}
-        \fbox{\includegraphics*[width=8cm]{DecimalToBinOctHexa.png}}
-        \caption{Decimal $-->$ Binary/Octal/Hexa-Decimal}
-    \end{center}
-\end{figure}
-% ************* Code********
-\begin{center}
-    \begin{verbatim}
-        public class Test {
-            public static void main(String args[]) {
-                String binary = "101101";
-                int decimal = Integer.parseInt(binary,2); // binary --> Decimal
-                System.out.println("Decimal = "+decimal);
-        
-                String octal = "675";
-                int decimal_2 = Integer.parseInt(octal,8); // octal --> Decimal
-                System.out.println("Decimal_2 = "+decimal_2);
-        
-                String hexa = "70AF";
-                int decimal_3 = Integer.parseInt(hexa,16); // hexa-decimal --> Decimal
-                System.out.println("Decimal_3 = "+decimal_3);
-        }
-    }
-    \end{verbatim}
-\end{center}
-% 
-% Figure 33 : Binary/Octal/Hexa-Decimal --> Decimal
-% 
-\begin{figure}[htbp]
-    \begin{center}
-        \fbox{\includegraphics*[width=8cm]{BinOctHexaToDecimal.png}}
-        \caption{Binary/Octal/Hexa-Decimal $-->$ Decimal}
-    \end{center}
-\end{figure}
-% 
-% Section 9.2
-% 
-\section{Date Class}
-This `Date' class is the only class which we can use to see the normal date 
-by formatting.
-% 
-% Subsection 9.2.1
-% 
-\subsection{Syntax}
-\begin{center}
-    \tt{
-        \raggedright{System-1 :}\\
-        \textit{
-            Date date = new Date();\\
-        }
-        \vskip 0.5cm
-        \raggedright{System-2 :}\\
-        \textit{
-            Date date = new Date();\\
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY");\\
-            String currentDate = dateFormat.format(date);\\
-        }
-    }
-\end{center}
 
-\newpage
 
-% 
-% Subsection 9.2.2
-% 
-\subsection{Example}
-\begin{center}
-    \begin{verbatim}
-        import java.text.DateFormat;
-        import java.text.SimpleDateFormat;
-        import java.util.Date;
 
-        public class Test {
-            public static void main(String args[]) {
-                Date date = new Date();
-            System.out.println("Date Class = "+date);
 
-            // Formatting Time (My choice)
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY");
-            String currentDate = dateFormat.format(date);
-            System.out.println("Current Date(My choice format) : "+currentDate);
-        }
-    }
-    \end{verbatim}
-\end{center}
-% 
-% Figure 33 : Date Class
-% 
-\begin{figure}[htbp]
-    \begin{center}
-        \fbox{\includegraphics*[width=8cm]{DateClass.png}}
-        \caption{Date Class}
-    \end{center}
-\end{figure}
-% 
-% Section 9.3
-% 
-\section{Time Class}
-Time class is used to receive current time.
-% 
-% Subsection 9.3.1
-% 
-\subsection{Example}
-\begin{center}
-    \tt{
-        \raggedright{System-1 :}\\
-        \textit{
-            LocalTime time = LocalTime.now();\\
-        }
-        \vskip 0.5cm
-        \raggedright{System-2 :}\\
-        \textit{
-            LocalTime time = LocalTime.now();\\
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");\\
-            String currentTime = time.format(formatter);\\
-        }
-    }
-\end{center}
 
-\newpage
 
-% 
-% Subsection 9.3.2
-% 
-\subsection{Example}
-\begin{center}
-    \begin{verbatim}
-        import java.time.LocalTime;
-        import java.time.format.DateTimeFormatter;
 
-        public class Test {
-            public static void main(String args[]) {
-                public static void main(String args[]) {
-                LocalTime time = LocalTime.now();
-                System.out.println("Time Class = "+time);
-
-                // Formatting Time (My choice)
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
-                String currentTime = time.format(formatter);
-                System.out.println("Current Date(My choice format) : "+currentTime);
-            }
-        }
-    \end{verbatim}
-\end{center}
-% 
-% Figure 34 : Time Class
-% 
-\begin{figure}[htbp]
-    \begin{center}
-        \fbox{\includegraphics*[width=8cm]{TimeClass.png}}
-        \caption{Time Class}
-    \end{center}
-\end{figure}
 
 
 
@@ -2723,14 +2496,3 @@ Time class is used to receive current time.
 \the \oddsidemargin
 
 \vskip 0.5cm
-
-% ************* Code********
-\begin{center}
-    \begin{verbatim}
-        public class Test {
-            public static void main(String args[]) {
-                
-        }
-    }
-    \end{verbatim}
-\end{center}
