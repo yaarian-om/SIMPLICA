@@ -2847,14 +2847,83 @@ methods. What is called methods we will learn next.
 Object of a class means creating an instance of that class. That means all the \\
 things of that class which is public, we can access them by using that instance \\
 or object.
+% 
+% Subsection 10.2.1
+% 
+\subsection{Syntax}
+\begin{center}
+    \tt{
+        \textit{className objectName; // Object Declaration\\
+            objectName = new className(); // Object Initialization \\
+            // Object Declaration $\&$ initialization\\
+            className objectName = new className();\\
+        }
+    }
+\end{center}
+% 
+% Subsection 10.2.2
+% 
+\subsection{Example}
+\begin{center}
+    \begin{verbatim}
+        class Teacher {
+            // Attributes
+            public String name;
+            public String gender;
+            public double salary;
 
+            // Methods
+            public void showInfo() {
+                System.out.println("Teacher Name = " + name);
+                System.out.println("Teacher Gender = " + gender);
+                System.out.println("Teacher Salary = " + salary);
+            }
+        }
 
+        public class Test {
+            public static void main(String args[]) {
+                Teacher t1 = new Teacher();
+                t1.name = "Sudipta Kumar";
+                t1.gender = "Male";
+                t1.salary = 1000000;
+                t1.showInfo();
+            }
+        }
+    \end{verbatim}
+\end{center}
+% 
+% Figure 38 : OOP Object Creation
+% 
+\begin{figure}[htbp]
+    \begin{center}
+        \fbox{\includegraphics*[width=8cm]{OOPObjectCreation.png}}
+        \caption{OOP Object Creation}
+    \end{center}
+\end{figure}
 
+\newpage
 
-
-
-
-
+% 
+% Section 10.3
+%
+\section{Methods in JAVA}
+Several things that work together to perform a single task is called a method. \\
+That means, method is a structure, where we write some codes which get executed \\
+together to perform a single task.
+% 
+% Subsection 10.3.1
+%
+\subsection{Syntax}
+\begin{center}
+    \raggedright
+    \tt{
+        \textit{
+            \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad methodReturnType methodName(parameter)\{ \\
+            \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad //Statements \\
+            \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \} \\
+        }
+    }
+\end{center}
 
 
 
