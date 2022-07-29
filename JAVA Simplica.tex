@@ -8,10 +8,14 @@
 \usepackage[xindy]{imakeidx}            %  For Inserting Index in Alphabetical order
 %\usepackage{float}                      %  For Preventing Table Repositioning
 \usepackage{float}                      %  For Preventing Table Repositioning
-\usepackage{geometry}
-
+% \usepackage{geometry}
+\usepackage[a4paper,showframe]{geometry} % Change while production
 
 \makeindex                              %  For Inserting Index in the document
+
+\pdfpagewidth 6in
+\pdfpageheight 9in
+
 
 \definecolor{smokeWhite}{HTML}{F5F5F5}
 \begin{document}
@@ -550,7 +554,7 @@ This kinds of comments started with just one forward slash and two star(/**) and
 A program is successful when it can take user inputs\cite{Ref7} and perform their task based on it appropiately.
 So, in that case, we have to take user inputs. For this we have to declare an object of Scanner class.
 In short, we have to write this line must \tt{\textit{Scanner input = new Scanner(System.in);}}.
-And to take input we have to use input.nextDataType(), here if we want to take integer, then we have to use input.nextInt();
+And to take input we have to use input.nextDataType(), \linebreak here if we want to take integer, then we have to use input.nextInt();
 % 
 % Table 3
 %
@@ -628,8 +632,9 @@ And to take input we have to use input.nextDataType(), here if we want to take i
 % Part 3
 % 
 \part{Basics of JAVA}
-JAVA is a vast programming language, but it has some basic things too, on
-whichs the whole language also depends on. In this part we'll going to discuss those things.
+JAVA is a vast programming language, but it has some basic things too, on \\
+which the whole language also depends on. In this part we'll going to discuss \\
+those things.
 % 
 % Chapter 4
 % 
@@ -638,9 +643,9 @@ whichs the whole language also depends on. In this part we'll going to discuss t
 % Section 4.1
 % 
 \section{Variables}
-Variables means a place where we store some data.
-As like if we want to store water, then we'll take a pot like bottles.
-Variables are like similar pots but we store data here. To write variables, we need dataTypes.
+Variables means a place where we store some data. As like if we want to store \\
+water, then we'll take a pot like bottles. Variables are like similar pots but \\
+we store data here. To write variables, we need dataTypes.
 % 
 % Subsection 4.1.1
 %
@@ -650,7 +655,8 @@ Variable declaration means just declare where the data we want to store, but not
 % Subsection 4.1.2
 %
 \subsection{Variable Initialization}
-Variable initialization means store values in variables which has already been declared previously by us. After that, we can store later there.
+Variable initialization means store values in variables which has already been \\
+declared previously by us. After that, we can store later there.
 % 
 % Subsection 4.1.3
 %
@@ -693,19 +699,19 @@ Variable initialization means store values in variables which has already been d
 %
 \subsection{Rules to write Variables \& Functions Name}
 \begin{itemize}
-    \item We can use Alphabets both Capital Letter(A-Z) \& Small Letter(a-z) for variable name.
-    \item We can use Numerical values (0 $\to$ 9), Underscore(\_) \& Dollar Sign(\$) for variable name.
-    \item Variable names can not be started with Numerical values (0 $\to$ 9) or any charater except Alphabets both Capital Letter(A-Z) \& Small Letter(a-z).
+    \item We can use Alphabets both Capital Letter(A-Z) \& Small Letter(a-z) for \\ variable name.
+    \item We can use Numerical values (0 $\to$ 9), Underscore(\_) \& Dollar Sign(\$) for \\ variable name.
+    \item Variable names can not be started with Numerical values (0 $\to$ 9) or any \\ charater except Alphabets both Capital Letter(A-Z) \& Small Letter(a-z).
     \item Any keyword can not be a variable name.
     \item There can not be any spaces inside a variable/function name.
-    \item We can use maximum 31 characters for the name of variables/functions. But using maximum 8 characters is standard.
+    \item We can use maximum 31 characters for the name of variables/functions. But \\ using maximum 8 characters is standard.
 \end{itemize}
 % 
 % Section 4.2
 % 
 \section{Data Types}
-Data Types\cite{Ref6} are basically types of pots that are used to store data inside it. As an example, if we want to store a football we can just use net(Not Internet) bags.
-But if we want to store water then we'll need bottles. Data Types are same. if we want to store integer numbers then we have to use integer type of variable not the boolean or another type.
+Data Types\cite{Ref6} are basically types of pots that are used to store data inside it. As an example, if we want to store a football we can just use net(Not Internet) \\ bags.
+But if we want to store water then we'll need bottles. Data Types are \\ same. if we want to store integer numbers then we have to use integer type of \\ variable not the boolean or another type.
 % 
 % Figure 8 : Data Types
 % 
@@ -783,7 +789,8 @@ But if we want to store water then we'll need bottles. Data Types are same. if w
 % Chapter 5
 % 
 \chapter{Operators}
-Operators\cite{Ref8} are some special characters which performs some special tasks like data assignation addition subtraction or decides equal or not greater or not.
+Operators\cite{Ref8} are some special characters which performs some special tasks like \\
+data assignation addition subtraction or decides equal or not greater or not. \\
 There are 8 kinds of operators. Those are,
 \begin{itemize}
     \item Arithmetic Operators
@@ -828,7 +835,8 @@ Arithmetic operators\cite{Ref8} are those we use for arithhmatc operations like 
 % Section 5.2
 % 
 \section{Assignment Operators}
-Assignment operators\cite{Ref8} are those we use for assigning values into variables like Equal to etc.
+Assignment operators\cite{Ref8} are those we use for assigning values into variables \\
+like Equal to etc.
 % 
 % Table 6
 % 
@@ -848,7 +856,8 @@ Assignment operators\cite{Ref8} are those we use for assigning values into varia
 % Section 5.3
 % 
 \section{Unary Operators}
-Unary operators\cite{Ref8} are also called single operators. I means these kinds of operators need just one varible to perform their tasks.
+Unary operators\cite{Ref8} are also called single operators. It means these kinds of \\
+operators need just one varible to perform their tasks.
 % 
 % Table 7
 % 
@@ -863,7 +872,7 @@ Unary operators\cite{Ref8} are also called single operators. I means these kinds
     \centering
     \caption{Unary Operators}
 \end{table}
-Unary operators are also 2 kinds. those are,
+\\ Unary operators are also 2 kinds. those are,
 \begin{itemize}
     \item Prefix
     \item Postfix
@@ -872,7 +881,8 @@ Unary operators are also 2 kinds. those are,
 % Subsection 5.3.1
 % 
 \subsection{Prefix}
-These kinds of operators\cite{Ref8} increment/decrement their value first then perform their tasks.
+These kinds of operators\cite{Ref8} increment/decrement their value first then perform \\
+their tasks.
 % 
 % Table 8
 % 
@@ -889,7 +899,8 @@ These kinds of operators\cite{Ref8} increment/decrement their value first then p
 % Subsection 5.3.2
 % 
 \subsection{Postfix}
-These kinds of operators\cite{Ref8} perform their task first then they increment/decrement their value.
+These kinds of operators\cite{Ref8} perform their task first then they increment or \\
+decrement their value.
 % 
 % Table 9
 %
@@ -906,7 +917,8 @@ These kinds of operators\cite{Ref8} perform their task first then they increment
 % Section 5.4
 % 
 \section{Relational Operators}
-These kinds of operators\cite{Ref8} are needed to create relations between 2 variables. As like which one is greater or smaller between 2 operators etc.
+These kinds of operators\cite{Ref8} are needed to create relations between 2 variables. \\
+As like which one is greater or smaller between 2 operators etc.
 % 
 % Table 10
 %
@@ -930,8 +942,10 @@ These kinds of operators\cite{Ref8} are needed to create relations between 2 var
 % Section 5.5
 % 
 \section{Bitwise Operators}
-Bitwise operators\cite{Ref8} are used to performing the manipulation of individual bits of a number.
-They can be used with any integral type (char, short, int, etc.). They are used when performing update and query operations of the Binary indexed trees.
+Bitwise operators\cite{Ref8} are used to performing the manipulation of individual bits \\
+of a number. They can be used with any integral type (char, short, int, etc.). \\
+They are used when performing update and query operations of the Binary indexed \\
+trees.
 % 
 % Table 11
 %
@@ -949,7 +963,8 @@ They can be used with any integral type (char, short, int, etc.). They are used 
 % Section 5.6
 % 
 \section{Logical Operators}
-Logical operators\cite{Ref8} are used to check whether an expression is true or false . They are used in decision making.
+Logical operators\cite{Ref8} are used to check whether an expression is true or false . \\
+They are used in decision making.
 % 
 % Table 12
 %
@@ -966,9 +981,9 @@ Logical operators\cite{Ref8} are used to check whether an expression is true or 
 % Section 5.7
 % 
 \section{Ternary Operators}
-The Java ternary operator\cite{Ref8} lets us write an if statement on one line of code.
-A ternary operator can either evaluate to true or false.
-It returns a specified value depending on whether the statement evaluates to true or false. We use Java if…else statements to control the flow of a program.
+The Java ternary operator\cite{Ref8} lets us write an if statement on one line of code. \\
+A ternary operator can either evaluate to true or false. It returns a specified value depending on whether the statement evaluates to true or false. We use \\
+Java if…else statements to control the flow of a program.
 % 
 % Table 13
 %
@@ -988,9 +1003,10 @@ It returns a specified value depending on whether the statement evaluates to tru
 % Section 5.8
 % 
 \section{Shift Operators}
-The shift operator\cite{Ref8} is used when we're performing logical bits operations, as opposed to mathematical operations.
-It can be used for speed, being significantly faster than division/multiplication when dealing with operands that are powers of two,
-but clarity of code is usually preferred over raw speed.
+The shift operator\cite{Ref8} is used when we're performing logical bits operations, as \\
+opposed to mathematical operations. It can be used for speed, being \\
+significantly faster than division/multiplication when dealing with operands \\
+that are powers of two, but clarity of code is usually preferred over raw speed.
 % 
 % Table 14
 %
@@ -1009,8 +1025,9 @@ but clarity of code is usually preferred over raw speed.
 % Chapter 6
 %
 \chapter{Control Statements}
-To know about control statements, we have know about the statements first. So, what is an statement? Any meaningful expression is called a statement.
-There must a semicolont after each and every statement finishes.
+To know about control statements, we have know about the statements first. So, \\
+what is an statement? Any meaningful expression is called a statement. There \\
+must a semicolont after each and every statement finishes.
 % 
 % Figure 11 : Control Statements
 % 
@@ -1024,11 +1041,16 @@ There must a semicolont after each and every statement finishes.
 % Section 6.1
 %
 \section{Conditional Statements}
-We, the programmers need conditional statements the most to control the flow of the program. Conditional statements gives machines the ability to take decisions depends On
-the situations. Those decisions are already pre-built by us but the program will execute the right decision at the right situation. As an example, we can say that if he accepts
-all the terms and conditions then confirm the deal and give a call, otherwise just cancel the deal and shutdown. Now it depends on the customer, if he accepts or not.
-But the computer knows what he should do after the decision customer takes. These kinds of tasks also can be done by computers using those conditional
-statements. Conditional statements have 3 sub-parts. Those are,
+We, the programmers need conditional statements the most to control the flow of \\
+the program. Conditional statements gives machines the ability to take decisions
+depends On the situations. Those decisions are already pre-built by us but the \\
+program will execute the right decision at the right situation. As an example, \\
+we can say that if he accepts all the terms and conditions then confirm the deal
+and give a call, otherwise just cancel the deal and shutdown. Now it depends on
+the customer, if he accepts or not. But the computer knows what he should do \\
+after the decision customer takes. These kinds of tasks also can be done by \\
+computers using those conditional statements. Conditional statements have 3 \\
+sub-parts. Those are,
 \begin{itemize}
     \item if-else
     \item if-else if-else
@@ -1038,7 +1060,8 @@ statements. Conditional statements have 3 sub-parts. Those are,
 % Subsection 6.1.1
 % 
 \subsection{If-Else}
-In this statement there will be atleast one if(condition)\{\}. And atmost one else\{\}. It will be perfectly alright if we do not use else here.
+In this statement there will be atleast one if(condition)\{\}. And atmost one \\
+else\{\}. It will be perfectly alright if we do not use else here.
 % 
 % Subsubsection 6.1.1.1
 % 
@@ -1091,8 +1114,9 @@ In this statement there will be atleast one if(condition)\{\}. And atmost one el
 % Subsection 6.1.2
 % 
 \subsection{If, Else If, Else}
-In this statement there will be atleast one if(condition)\{\}. And atmost one else\{\}. There can be multiple else if(condition)\{\}.
-It will be perfectly alright if we do not use else here.
+In this statement there will be atleast one if(condition)\{\}. And atmost one \\
+else\{\}. There can be multiple else if(condition)\{\}. It will be perfectly \\
+alright if we do not use else here.
 % 
 % Subsubsection 6.1.2.1
 % 
@@ -1144,10 +1168,15 @@ It will be perfectly alright if we do not use else here.
 % Subsection 3.1.3
 % 
 \subsection{Switch}
-Switch is a conditional statement which is used to take decision from multiple options. It is kind of a list contains multiple decisions based on multiple situations.
-As an example, we all have seen the vending machine. There are lots of cokes placed on the shelves. We have to put money and press the button of the coke we want. Then the
-coke from a specific shelf comes down automatically. Switch case is kind of same. User have to push a button or select from multiple choice. The program will perform the task
-assigned for that specific option from those multiple choices. There are 2 types of inputs for switches. Those are,
+Switch is a conditional statement which is used to take decision from multiple \\
+options. It is kind of a list contains multiple decisions based on multiple \\
+situations. As an example, we all have seen the vending machine. There are \\
+lots of cokes placed on the shelves. We have to put money and press the button \\
+of the coke we want. Then the coke from a specific shelf comes down automatic-\\
+-ally. Switch case is kind of same. User have to push a button or select from \\
+multiple choice. The program will perform the task assigned for that specific \\
+option from those multiple choices. There are 2 types of inputs for switches. \\
+Those are,
 \begin{itemize}
     \item Single Digit Numbers (0 $\to$ 9)
     \item Alphabets (A-Z) or (a-z)
@@ -1303,9 +1332,14 @@ public class Test{
 % Section 6.2
 % 
 \section{Looping Statements}
-Looping means iterations. That means doing any specific task again \& again or multiple times. Sometimes we have to do many tasks again and again to complete it. In these situations
-we use loops to finish it. because it's impossible to write same code 100 of time if we have to repeat it 100 times. So, we creates loops and tell it to run and do same task repeatedly 100 times.
-sometimes we need to repeat same task till a specific environment occurs. In that case we can also use conditions in the loops. There are 3 kinds of loops in JAVA. Those are,
+Looping means iterations. That means doing any specific task again \& again or \\
+multiple times. Sometimes we have to do many tasks again and again to complete \\
+it. In these situations we use loops to finish it. because it's impossible to \\
+write same code 100 of time if we have to repeat it 100 times. So, we creates \\
+loops and tell it to run and do same task repeatedly 100 times. sometimes we \\
+need to repeat same task till a specific environment occurs. In that case we \\
+can also use conditions in the loops. There are 3 kinds of loops in JAVA. \\
+Those are,
 \begin{itemize}
     \item For Loops
     \item While Loops
@@ -1315,7 +1349,8 @@ sometimes we need to repeat same task till a specific environment occurs. In tha
 % Subsection 6.2.1
 % 
 \subsection{For Loops}
-For Loops are also called incremental loops. We use this loop, when we know exactly how many times we want to repeat the task.
+For Loops are also called incremental loops. We use this loop, when we know \\
+exactly how many times we want to repeat the task.
 % 
 % Susubbsection 6.2.1.1
 % 
@@ -1365,7 +1400,9 @@ For Loops are also called incremental loops. We use this loop, when we know exac
 % Subsection 6.2.2
 % 
 \subsection{While Loops}
-While loops are also called conditional loops. Because we use conditions in this loop. As an exaple, we can do a repeated task until the user put a specific value.
+While loops are also called conditional loops. Because we use conditions in \\
+this loop. As an exaple, we can do a repeated task until the user put a \\
+specific value.
 % 
 % Subsubbsection 6.2.2.1
 % 
@@ -1417,9 +1454,11 @@ While loops are also called conditional loops. Because we use conditions in this
 % Subsection 6.2.3
 % 
 \subsection{Do-While Loops}
-Do while loops are similar like while loop, just the difference is, while loop checks condition at the first, but in do while, it checks at the last.
-And if condition is wrong at the first, then while loop doesn't work, but as do while checks the condition at the last, so do while loop runs minimum one time
-though the condition is wrong.
+Do while loops are similar like while loop, just the difference is, while loop  \\
+checks condition at the first, but in do while, it checks at the last. And if \\
+condition is wrong at the first, then while loop doesn't work, but as do while \\
+checks the condition at the last, so do while loop runs minimum one time though \\
+the condition is wrong.
 % 
 % Susubbsection 6.2.3.1
 % 
@@ -1524,8 +1563,14 @@ for arrays.
 % 
 \subsection{Break}
 Break is mostly used in switches.
-Rather, It is also used in the loops too. Break basically ends the most inner loop a switch case. That means if a java compiler reads a break statement
-it immediately the most inner loop or case.
+Rather, It is also used in the loops too. \\
+Break basically ends the most inner loop a \\
+switch case. That means if a java compiler \\
+reads a break statement it immediately the \\
+most inner loop or case.
+
+\newpage
+
 % 
 % Subsubsection 6.3.1.1
 % 
@@ -1569,13 +1614,16 @@ it immediately the most inner loop or case.
         \caption{Break}
     \end{center}
 \end{figure}
+
+\newpage
+
 % 
 % Subsection 6.3.2
 % 
 \subsection{Continue}
-Continue keyword means kind of skip. That means if a java compiler
-founds that keyword in any loop then it skips that iteration(executing statements)
-\& goes for the next iteration.
+Continue keyword means kind of skip. That means if a java compiler founds that \\
+keyword in any loop then it skips that iteration(executing statements) \& goes \\
+for the next iteration.
 % 
 % Subsubsection 6.3.2.1
 % 
@@ -1590,6 +1638,7 @@ founds that keyword in any loop then it skips that iteration(executing statement
 % 
 \subsubsection{Example}
 \begin{center}
+    \footnotesize
     \begin{verbatim}
         import java.util.Scanner;
         public class Test {
@@ -1626,17 +1675,17 @@ founds that keyword in any loop then it skips that iteration(executing statement
 % Chapter 7
 % 
 \chapter{Array}
-Array means declaration of bunch of variables of same type at a time.
-It means if we want to declare 50 variables for 50 data, and we don't
-use array, then we have to declare them one by one manually. But if we
-use array then we just declare once with data type and we'll tell
-it to declare 50 variables then it'll declare 50 variables automatically
-it's own. \linebreak
-To create an array we need new keyword. Sometimes the size of array
-can be pre defined sometimes the user have the choice to declare the
-size of an array. These are called dynamic memory allocation. This
-type of animation is also called non-primitives. \linebreak
-To see the length of the array, we have to use .length keyword.
+Array means declaration of bunch of variables of same type at a time. It means \\
+if we want to declare 50 variables for 50 data, and we don't use array, then we \\
+have to declare them one by one manually. But if we use array then we just \\
+declare once with data type and we'll tell it to declare 50 variables then \\
+it'll declare 50 variables automatically it's own. \linebreak
+
+To create an array we need new keyword. Sometimes the size of array can be \\
+pre defined sometimes the user have the choice to declare the size of an array. \\
+These are called dynamic memory allocation. This type of animation is also \\
+called non-primitives. To see the length of the array, we have to use \\
+.length keyword.
 % 
 % Subsubsection 7.0.0.1
 %  
@@ -1716,10 +1765,9 @@ There are 2 kinds of arrays. Those are,
 % Section 7.1
 % 
 \section{One Dimensional Array}
-One Dimensional array has just one row of variables in a matrix.
-Or, we can say that one dimensional array is just a simple array
-with defined number of variables. And how many variables it'll
-create, that defined number depend on us.
+One Dimensional array has just one row of variables in a matrix.Or, we can say \\
+that one dimensional array is just a simple array with defined number of \\
+variables. And how many variables it'll create, that defined number depend on \\ us.
 % 
 % Section 7.1.1
 %
@@ -1777,32 +1825,33 @@ element or position is a variable.
 %
 \subsection{Example}
 \begin{center}
+    \footnotesize
     \begin{verbatim}
-        import java.util.Scanner;
-        public class Test {
-            public static void main(String args[]) {
-                Scanner input = new Scanner(System.in);
-                System.out.print("Enter the row Number : ");
-                int m = input.nextInt();
-                System.out.print("Enter the Column Number : ");
-                int n = input.nextInt();
-                System.out.println("Enter Values : ");
-                int [][] numbers = new int[m][n];
-                for(int row=0;row<m;row++){
-                    for(int col=0;col<n;col++){
-                        System.out.print("Number["+(row+1)+"]["+(col+1)+"] = ");
-                        numbers[row][col] = input.nextInt();
-                    }
-                }
+      import java.util.Scanner;
+      public class Test {
+          public static void main(String args[]) {
+              Scanner input = new Scanner(System.in);
+              System.out.print("Enter the row Number : ");
+              int m = input.nextInt();
+              System.out.print("Enter the Column Number : ");
+              int n = input.nextInt();
+              System.out.println("Enter Values : ");
+              int [][] numbers = new int[m][n];
+              for(int row=0;row<m;row++){
+                  for(int col=0;col<n;col++){
+                      System.out.print("Number["+(row+1)+"]["+(col+1)+"] = ");
+                      numbers[row][col] = input.nextInt();
+                  }
+              }
 
-                System.out.println("\n\nInsterd Values are =====>>");
-                for(int row=0;row<m;row++){
-                    for(int col=0;col<n;col++){
-                        System.out.println("Number["+(row+1)+"]["+(col+1)+"] = "+numbers[row][col]);
-                    }
-                }
-            }
-        }
+              System.out.println("\n\nInsterd Values are =====>>");
+              for(int row=0;row<m;row++){
+                  for(int col=0;col<n;col++){
+                      System.out.println("Number["+(row+1)+"]["+(col+1)+"] = "+numbers[row][col]);
+                  }
+              }
+          }
+      }
     \end{verbatim}
 \end{center}
 % 
@@ -1818,13 +1867,13 @@ element or position is a variable.
 % Section 7.3
 % 
 \section{ArrayList}
-In short, arrayList is a dynamic array, where you can get as
-much as variables but no overflow or null/underflow. As an example, suppose we need 5
-variables to store the marks of 5 students. but suddenly 3 students appears
-now if we use normal array, then the storage is fixed with length 5 which
-means we have start from the beginning again.But, if we use the
-arrayList, then we can add those 3 students also without writing the
-code/software again. That's why it is also called the better version of arrays.\linebreak
+In short, arrayList is a dynamic array, where you can get as much as variables \\
+but no overflow or null/underflow. As an example, suppose we need 5 variables \\
+to store the marks of 5 students. but suddenly 3 students appears now if we use \\
+normal array, then the storage is fixed with length 5 which means we have start \\
+from the beginning again.But, if we use the arrayList, then we can add those 3 \\
+students also without writing the code/software again. That's why it is also \\
+called the better version of arrays. \linebreak
 To add values in arrayList we need to use \textit{arrayListName.add(value);}
 % 
 % figure : 24
@@ -1910,9 +1959,9 @@ To add values in arrayList we need to use \textit{arrayListName.add(value);}
 % Subsection 7.3.3
 % 
 \subsection{Set Methods}
-.set methods is used to replace any existing value present in any index of
-arrayList. That means if we want to change the value of 5th index then
-the arrayList should have the values from index 0 $\to$ 5.
+.set methods is used to replace any existing value present in any index of \\
+arrayList. That means if we want to change the value of 5th index then the \\
+arrayList should have the values from index 0 $\to$ 5.
 % 
 % Subsubsection 7.3.3.1
 % 
@@ -2032,7 +2081,7 @@ arrayList.
         public class Test {
             public static void main(String args[]) {
                 Scanner input = new Scanner(System.in);
-                ArrayList<Integer>numbers = new ArrayList<>(); // Declaring ArrayList
+                ArrayList<Integer>numbers = new ArrayList<>();//Declare ArrayList
                 // Adding values to numbers
                 numbers.add(50);
                 numbers.add(30);
@@ -2070,8 +2119,8 @@ arrayList.
 % Chapter 8
 % 
 \chapter{String}
-Sequence of characters are together called strings. In simple words,
-words and sentences are called strings.
+Sequence of characters are together called strings. In simple words, words and \\
+sentences are called strings.
 % 
 % Section : 8.1 
 % 
@@ -2123,12 +2172,12 @@ words and sentences are called strings.
     \begin{tabular}{ll}
         Method        & TaskDescription                                                                                                                                             \\
         trim()        & Removes the previous after spaces in of a string                                                                                                            \\
-        charAt()      & It takes an integer value as index and return the thing holding in that index variable                                                                      \\
+        charAt()      & Takes an integer value as index \& return thing holding in that index variable                                                                              \\
         charPointAt() & Shows ASCII value based on input parameter                                                                                                                  \\
         indexOf       & Shows the index value of any character/word                                                                                                                 \\
         lastIndexOf() & \begin{tabular}[c]{@{}l@{}}If there is same character or word in a string then shows the index of the\\ last occurrence of that word/character\end{tabular} \\
-        replace()     & It replaces all words that matches with the specific given word and puts new word                                                                           \\
-        split()       & It breaks when it founds the specific character given and makes it as a data cropping
+        replace()     & It replaces all words that matches with the given word and puts new word                                                                                    \\
+        split()       & It breaks when it founds the specific character and crops data till there
     \end{tabular}
     \centering
     \caption{String Special Methods}
@@ -2138,6 +2187,7 @@ words and sentences are called strings.
 % 
 \subsection{Example}
 \begin{center}
+    \footnotesize
     \begin{verbatim}
         import java.util.ArrayList;
         import java.util.Collection;
@@ -2182,16 +2232,18 @@ words and sentences are called strings.
         \caption{String Methods\cite{Ref3}}
     \end{center}
 \end{figure}
+
+\newpage
+
 % 
 % Section 8.2
 % 
 \section{String Buffer}
-The only difference between string and string Buffer is ,
-for string we can not change the string and store at the same
-variable. Because we just make association by just declaring string variables.
-But if we initialize string object that means this is only operated inside
-that class no where else so that's why we can change the string and store
-in that same variable.
+The only difference between string and string Buffer is, for string we can not \\
+change the string and store at the same variable. Because we just make \\
+association by just declaring string variables. But if we initialize string \\
+object that means this is only operated inside that class no where else so \\
+that's why we can change the string and store in that same variable.
 % 
 % table : 19
 % 
@@ -2299,8 +2351,8 @@ Of them, StringBuffer and StringBuilder are similar.
 % Chapter 9
 % 
 \chapter{Wrapper Class}
-We know, int, charAt, double, these are primitive dataTypes. So, if
-we want to convent these into a object or we want to convert an object Introduction
+We know, int, charAt, double, these are primitive dataTypes. So, if we want to \\
+convent these into a object or we want to convert an object Introduction \\
 primitive dataTypes, then we'll need wrapper classes.
 % 
 % Table : 20
@@ -2433,7 +2485,7 @@ AutoBoxing means to convert an object to a primitive dataType.
         public class Test {
             public static void main(String args[]) {
             int decimal = 15;
-            String binary = Integer.toBinaryString(decimal); // decimal --> Binary
+            String binary = Integer.toBinaryString(decimal);//decimal --> Binary
             System.out.println("Binary = "+binary);
 
             String octal = Integer.toOctalString(decimal); // decimal --> Octal
@@ -2468,7 +2520,7 @@ AutoBoxing means to convert an object to a primitive dataType.
                 System.out.println("Decimal_2 = "+decimal_2);
         
                 String hexa = "70AF";
-                int decimal_3 = Integer.parseInt(hexa,16); // hexa-decimal --> Decimal
+                int decimal_3 = Integer.parseInt(hexa,16); // hexa --> Decimal
                 System.out.println("Decimal_3 = "+decimal_3);
         }
     }
@@ -2487,8 +2539,8 @@ AutoBoxing means to convert an object to a primitive dataType.
 % Section 9.2
 % 
 \section{Date Class}
-This `Date' class is the only class which we can use to see the normal date
-by formatting.
+This `Date' class is the only class which we can use to see the normal date by \\
+formatting.
 % 
 % Subsection 9.2.1
 % 
@@ -2575,6 +2627,7 @@ Time class is used to receive current time.
 % 
 \subsection{Example}
 \begin{center}
+    \footnotesize
     \begin{verbatim}
         import java.time.LocalTime;
         import java.time.format.DateTimeFormatter;
@@ -2606,8 +2659,8 @@ Time class is used to receive current time.
 % Section 9.4
 % 
 \section{Random Number}
-Random number means the program will generate any digit or multi-digit
-number automatically. We can do this by using,
+Random number means the program will generate any digit or multi-digit number \\
+automatically. We can do this by using,
 \begin{itemize}
     \item Random Class
     \item Math Class
@@ -2638,6 +2691,7 @@ number automatically. We can do this by using,
 % 
 \subsubsection{Example}
 \begin{center}
+    \footnotesize
     \begin{verbatim}
         import java.util.Random;
         public class Test {
@@ -2671,16 +2725,16 @@ number automatically. We can do this by using,
 % Part 4 
 % 
 \part{Object Oriented Programming}
-As the name suggests, object-oriented programming or
-OOPs refers to languages that use objects in programming,
-they use objects as a primary source to implement what is to happen in the code.
-Objects are seen by the viewer or user, performing tasks assigned by you.
+As the name suggests, object-oriented programming or OOPs refers to languages
+that use objects in programming, they use objects as a primary source to \\
+implement what is to happen in the code. Objects are seen by the viewer or \\
+user, performing tasks assigned by you.
 % 
 % Chapter 10
 % 
 \chapter{Introduction to Object Oriented Programming}
-In this chapter we'll learn about the basic things of OOP(Object Oriented Programming).
-Mainly OOP is based on some core features. Those are,
+In this chapter we'll learn about the basic things of OOP(Object Oriented \\
+Programming). Mainly OOP is based on some core features. Those are,
 \begin{itemize}
     \item Encapsulation
     \item Classes
@@ -2706,20 +2760,20 @@ Mainly OOP is based on some core features. Those are,
 % Subsubsection 10.0.0.1
 % 
 \subsubsection{Object}
-Everything we can see around us is called an object. More specifically,
+Everything we can see around us is called an object. More specifically, \\
 Variables or instance of any class is called an object.
 % 
 % Subsubsection 10.0.0.2
 % 
 \subsubsection{Class}
-Common collection of many objects is called a class. More specifically,
-class is a thing which holds variables and methods inside it.
+Common collection of many objects is called a class. More specifically, class \\
+is a thing which holds variables and methods inside it.
 % 
 % Section 10.1
 % 
 \section{Introducing Class}
-A class in java is basically a template that we can use multiple
-times. There are 3 major portion of a class. Those are,
+A class in java is basically a template that we can use multiple times. There \\
+are 3 major portion of a class. Those are,
 \begin{itemize}
     \item className
     \item attributes/variables
@@ -2734,10 +2788,16 @@ times. There are 3 major portion of a class. Those are,
         \caption{Class Structure}
     \end{center}
 \end{figure}
-
-
-
-
+% 
+% Subsection 10.1.1
+% 
+\subsection{Class Name}
+Every class must have a class name. Class name has also a access modifier \\
+public/private/default. If we use default or no access modifier, then it can \\
+oly be accessed from that folder. So to use this globally we need to declare \\
+it as public. And if we declare it as public, then we have to keep the \\
+fileName.java as same as the className. \\
+That means file name would be == className.java
 
 
 
